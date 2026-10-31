@@ -1,0 +1,2638 @@
+[
+  {
+    "paper_id": "A1_Transformer_Attention",
+    "section_id": "6",
+    "title": "6 Results",
+    "depth": 1,
+    "char_start": 22645,
+    "pos_frac": 0.5718145548204636,
+    "next_title": "6.1 Machine Translation",
+    "gap_chars": 1,
+    "prev_gap": 1246,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "b44c95c9c957c26a7470fb76c61e34ef7f311a3f494678ac969e19d0aaee9571"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "642d6c008b33241e7a0fd059aac5ef7f399414c0e5a875943b94e1f289f6e379"
+    },
+    "children": [
+      "6.1",
+      "6.2",
+      "6.3"
+    ],
+    "include_descendants_chars": 6277,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section '6.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "A2_BERT",
+    "section_id": "A.4",
+    "title": "A.4 Comparison of BERT, ELMo ,and",
+    "depth": 2,
+    "char_start": 54813,
+    "pos_frac": 0.8569351510224501,
+    "next_title": "OpenAI GPT",
+    "gap_chars": 1,
+    "prev_gap": 885,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "94b44fe29274bc562cfcee2c539a2018c8ba71ee20cca5e83a1956cd484fb727"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "34f429a86dbf14f461d367ae005ca90bbfc3988ff93b3ee4cb9cd7dd92dd5237"
+    },
+    "children": [],
+    "include_descendants_chars": 34,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title starts with an uppercase appendix/designator token"
+    ]
+  },
+  {
+    "paper_id": "A2_BERT",
+    "section_id": "B",
+    "title": "B Detailed Experimental Setup",
+    "depth": 1,
+    "char_start": 57266,
+    "pos_frac": 0.8952848477268464,
+    "next_title": "B.1 Detailed Descriptions for the GLUE\nBenchmark Experiments.",
+    "gap_chars": 1,
+    "prev_gap": 575,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "cb83891222362f8cfde98738122a1132b048a05eb6a46805bf6f7b448cb595f2"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "5837487da59ac9d439d089013d73188913de678cb51f3fec9dca3ddc027e863e"
+    },
+    "children": [
+      "B.1"
+    ],
+    "include_descendants_chars": 3593,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'B.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "A3_GPT4_TechReport",
+    "section_id": "long-context",
+    "title": "Long context",
+    "depth": 1,
+    "char_start": 40533,
+    "pos_frac": 0.14234941684255628,
+    "next_title": "Core contributors",
+    "gap_chars": 1,
+    "prev_gap": 337,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "135aad2f05a645fba57dd5c45b1f9aae1f48593d3a1beb50ee10065dbed6464b"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "92f0bada4307ed377cfc991b0e250a340ac88e7961ece426f0350acc69df9e5f"
+    },
+    "children": [],
+    "include_descendants_chars": 13,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "A3_GPT4_TechReport",
+    "section_id": "vision",
+    "title": "Vision",
+    "depth": 1,
+    "char_start": 40855,
+    "pos_frac": 0.14348026114777185,
+    "next_title": "Core contributors",
+    "gap_chars": 1,
+    "prev_gap": 15,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "1be91e365d0a923d45b9f09eb2a2f6360f34d843cb6d0ed44fa0813a8755fc50"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "52b759736c0d1830338e9c8f714ec6b53b3ffb308f0ec4136f291fc5ccac13b1"
+    },
+    "children": [],
+    "include_descendants_chars": 7,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "A3_GPT4_TechReport",
+    "section_id": "appendix",
+    "title": "Appendix",
+    "depth": 1,
+    "char_start": 74926,
+    "pos_frac": 0.2631355292316229,
+    "next_title": "A Exam Benchmark Methodology",
+    "gap_chars": 1,
+    "prev_gap": 33795,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "434504e811d4afa1591f79a1a4152468db71be04f17b9917d1abe96f1fe77626"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "6af9e0cc9d24760aa1788c339329cf7fbc9f54db13ad45ca478be1c5bb2d64aa"
+    },
+    "children": [],
+    "include_descendants_chars": 9,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "A3_GPT4_TechReport",
+    "section_id": "A",
+    "title": "A Exam Benchmark Methodology",
+    "depth": 1,
+    "char_start": 74935,
+    "pos_frac": 0.26316713668114755,
+    "next_title": "A.1 Sourcing",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "87b8dbec6d70d2f7ac80f35f6a4b205335896ea9121a787afbc45b45845ef947"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "3379d9ba2d658abfdae849ae3ee86cd3421cbd518faad8b0a2ac97c7221d6723"
+    },
+    "children": [
+      "A.1",
+      "A.2",
+      "A.3",
+      "A.4",
+      "A.5",
+      "A.6",
+      "A.7",
+      "A.8"
+    ],
+    "include_descendants_chars": 37957,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'A.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "A3_GPT4_TechReport",
+    "section_id": "2.1",
+    "title": "2.1 Evaluation Approach",
+    "depth": 2,
+    "char_start": 123948,
+    "pos_frac": 0.4352977948536048,
+    "next_title": "2.1.1 Qualitative Evaluations",
+    "gap_chars": 1,
+    "prev_gap": 1466,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "59bfee9ff7c9a066ca3d3945b23236e8cf5b0350e183db5a77fc60ee021e945e"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "eac8c0cdc88ec828067e7af6835b3d6bd58bb0d10f75897d60e695436ace65ba"
+    },
+    "children": [
+      "2.1.1",
+      "2.1.2"
+    ],
+    "include_descendants_chars": 6220,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section '2.1.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "A3_GPT4_TechReport",
+    "section_id": "4#2",
+    "title": "4 System Safety",
+    "depth": 1,
+    "char_start": 198851,
+    "pos_frac": 0.6983525494919981,
+    "next_title": "4.1 Usage Policies and Monitoring",
+    "gap_chars": 1,
+    "prev_gap": 14091,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "7e9461ee1276d57ecc0f13399884b150a3b6a3c1da6ff3759166692fcc8ac18b"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "55aff3b1ee73b9a10d059c0a3e76a4c13c07e2b7e1f40a6c9de5755f54434bd9"
+    },
+    "children": [
+      "4.1#2",
+      "4.2"
+    ],
+    "include_descendants_chars": 8773,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section '4.1#2' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "A5_ChainOfThought",
+    "section_id": "C",
+    "title": "C Extended Related Work",
+    "depth": 1,
+    "char_start": 80330,
+    "pos_frac": 0.591026810677183,
+    "next_title": "Chain-of-thought prompting is a general approach that is inspired by several prior directions: prompt￾ing, natural language explanations, program synthesis/execution, numeric and logical reasoning, and\nintermediate language steps.",
+    "gap_chars": 1,
+    "prev_gap": 1866,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "4600625a5d917ee6fbec23f200047883617491cf6e6ebae33fdece38b4b8431a"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "37c9ad338e804fff43abd324dc7f1a2f678ae84adb2393b0b0ffb7604b219df2"
+    },
+    "children": [],
+    "include_descendants_chars": 24,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title starts with an uppercase appendix/designator token"
+    ]
+  },
+  {
+    "paper_id": "A5_ChainOfThought",
+    "section_id": "D",
+    "title": "D Appendix: Additional Analysis",
+    "depth": 1,
+    "char_start": 86229,
+    "pos_frac": 0.6344286176756232,
+    "next_title": "D.1 Correct Chain of Thought Analysis",
+    "gap_chars": 1,
+    "prev_gap": 1291,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "cc545364a76227b043358061f5a44af3ae8117b29065434c9e3574686b99129d"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "3792cf777a97c9910c460b36a31b09f1d4ea331163b7473db933f827404f2158"
+    },
+    "children": [
+      "D.1",
+      "D.2",
+      "D.3"
+    ],
+    "include_descendants_chars": 16583,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'D.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "A6_LoRA",
+    "section_id": "F",
+    "title": "F ADDITIONAL EMPIRICAL EXPERIMENTS",
+    "depth": 1,
+    "char_start": 70969,
+    "pos_frac": 0.8553985970156449,
+    "next_title": "F.1 ADDITIONAL EXPERIMENTS ON GPT-2",
+    "gap_chars": 1,
+    "prev_gap": 3785,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "dae889acb7e57fb9e9a797a190fd4bab8059651cb56da157014e4ab8cb4e1268"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "60428d68f09da331212a9ab960ef7cfc51b3481ad0680f5f100db6070197f388"
+    },
+    "children": [
+      "F.1",
+      "F.2",
+      "F.3"
+    ],
+    "include_descendants_chars": 6801,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'F.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "A7_ViT",
+    "section_id": "B",
+    "title": "B EXPERIMENT DETAILS",
+    "depth": 1,
+    "char_start": 44253,
+    "pos_frac": 0.6575971468905565,
+    "next_title": "B.1 TRAINING",
+    "gap_chars": 1,
+    "prev_gap": 844,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "ff6d28fe9ec9c5c92d4ca8395367aa3afff8421c6039ece94a3c5af4b5377c24"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "3454fc57f9ce41ccf1743907d2ae906a93092e07795c6ba86a1ea6f202705bba"
+    },
+    "children": [
+      "B.1"
+    ],
+    "include_descendants_chars": 4628,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'B.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "A7_ViT",
+    "section_id": "D",
+    "title": "D ADDITIONAL ANALYSES",
+    "depth": 1,
+    "char_start": 51871,
+    "pos_frac": 0.7708002080392302,
+    "next_title": "D.1 SGD VS. ADAM FOR RESNETS",
+    "gap_chars": 1,
+    "prev_gap": 2970,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "efd5d836fadb1a606bfc9d6bf938c4426530d46525013d335623c304316c8400"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "c98594b9189e0beb3a2fbe43260f487105e6c6dfd0967f33ba07de7d85e3b4f0"
+    },
+    "children": [
+      "D.1",
+      "D.2",
+      "D.3",
+      "D.4",
+      "D.5",
+      "D.6",
+      "D.7",
+      "D.8",
+      "D.9",
+      "D.10"
+    ],
+    "include_descendants_chars": 15424,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'D.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "B2_ResNet",
+    "section_id": "3",
+    "title": "3. Deep Residual Learning",
+    "depth": 1,
+    "char_start": 9820,
+    "pos_frac": 0.16548423518309432,
+    "next_title": "3.1. Residual Learning",
+    "gap_chars": 1,
+    "prev_gap": 2465,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "deeb67100312215fabc4af90977d20d2aa4be97cfa32f90147ea36c481f643c1"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "0e2b7007704a11d0761ebb96f5a187d686e975ada929ee124446fcc19d19a60f"
+    },
+    "children": [
+      "3.1",
+      "3.2",
+      "3.3",
+      "3.4"
+    ],
+    "include_descendants_chars": 8960,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section '3.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "B2_ResNet",
+    "section_id": "4",
+    "title": "4. Experiments",
+    "depth": 1,
+    "char_start": 18780,
+    "pos_frac": 0.3164759609713352,
+    "next_title": "4.1. ImageNet Classification",
+    "gap_chars": 1,
+    "prev_gap": 1095,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "9fffff1494a2b097f686833842d3557295de888f65a8d744b00d9cb5ac545ad0"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "291bca8cd31502ecbd800aedc558b39bbbcff4ed507c08c7e5d98c1d42455085"
+    },
+    "children": [
+      "4.1"
+    ],
+    "include_descendants_chars": 3604,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section '4.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "B3_GAN_IEEE",
+    "section_id": "8",
+    "title": "8 Solutions to exercises",
+    "depth": 1,
+    "char_start": 90681,
+    "pos_frac": 0.7929017365300877,
+    "next_title": "8.1 The optimal discriminator strategy",
+    "gap_chars": 1,
+    "prev_gap": 401,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "0241e96ba574b432b9336af6f8ddae096a930f93f7bd1d4d5dca2f3a613948c0"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "9eb4a9dbd796333155b6d3c9c25016aac3ad0ffe562e2d6bbb82f2c06743740f"
+    },
+    "children": [
+      "8.1"
+    ],
+    "include_descendants_chars": 406,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section '8.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "B7_GNN_Review",
+    "section_id": "7",
+    "title": "7. Analyses of GNNs",
+    "depth": 1,
+    "char_start": 69453,
+    "pos_frac": 0.4215685679427493,
+    "next_title": "7.1. Theoretical aspect",
+    "gap_chars": 1,
+    "prev_gap": 2187,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "291bd23da34f0fdc8020f8407cd56925cb766c0c5c43d97c13dc0c9d40dc65b4"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "4a264c994d22d77c0097664b3f33d1298bd6c08ea29e0944cee61d7217caa9ff"
+    },
+    "children": [
+      "7.1",
+      "7.2"
+    ],
+    "include_descendants_chars": 11329,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section '7.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C1_Survey_LLM",
+    "section_id": "8.1.1",
+    "title": "8.1.1 LLM for Classic",
+    "depth": 3,
+    "char_start": 412011,
+    "pos_frac": 0.4799990213873465,
+    "next_title": "NLP Tasks",
+    "gap_chars": 1,
+    "prev_gap": 232,
+    "match_level": "L1",
+    "is_standalone": false,
+    "context_before": {
+      "chars": 120,
+      "sha256": "408182c8b86554d2addbf635b153ef17df3e3eb92c8d2652d7600c6c27ca0963"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "db7a34a4e10b282b702885e2325620c8e6820c38c92d73eb3e87916a35eb1694"
+    },
+    "children": [],
+    "include_descendants_chars": 22,
+    "include_descendants_has_content": false,
+    "classification": "c_locator_misplacement",
+    "confidence_tier": "strongly_correlated_not_proven",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "is_standalone=false",
+      "no conservative table-of-contents marker was observed"
+    ]
+  },
+  {
+    "paper_id": "C2_ScalingLaws",
+    "section_id": "D",
+    "title": "D Supplemental Figures",
+    "depth": 1,
+    "char_start": 67135,
+    "pos_frac": 0.7513541946458949,
+    "next_title": "D.1 Early Stopping and Test vs Train",
+    "gap_chars": 1,
+    "prev_gap": 2994,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "4a7bd88766598093e1f3b8664b6ff74d47049f70cd22ca73db1f1f05be73f214"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "2e4e059c03ba67d46331bafada3f66b2e6f90e48c04cc9db922be743d12e6fe1"
+    },
+    "children": [
+      "D.1",
+      "D.2",
+      "D.3",
+      "D.4",
+      "D.5",
+      "D.6",
+      "D.7",
+      "D.8"
+    ],
+    "include_descendants_chars": 22217,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'D.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C3_Voyager",
+    "section_id": "3",
+    "title": "3 Experiments",
+    "depth": 1,
+    "char_start": 18594,
+    "pos_frac": 0.15431345698991658,
+    "next_title": "3.1 Experimental Setup",
+    "gap_chars": 1,
+    "prev_gap": 3537,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "d3414060e06ba6f5a4ffe5365de5b7534a634574b1746fbf00ab712d0304bcaf"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "78bd12b177b61de5a69086338178117c11f1cb5cfaca2e7e4d94e10cdc288ee3"
+    },
+    "children": [
+      "3.1",
+      "3.2",
+      "3.3",
+      "3.4",
+      "3.5"
+    ],
+    "include_descendants_chars": 10168,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section '3.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C3_Voyager",
+    "section_id": "A",
+    "title": "A Method",
+    "depth": 1,
+    "char_start": 65481,
+    "pos_frac": 0.5434333374828831,
+    "next_title": "A.1 VOYAGER Algorithm",
+    "gap_chars": 1,
+    "prev_gap": 29825,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "7d7acdc6461129adda40eb02aac686b4cca3793b96759be25d7d3fce737ef084"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "fed9e0108da88e32371cda024a252257a75583b11d8ddeb380df2ce1366f089a"
+    },
+    "children": [
+      "A.1",
+      "A.2",
+      "A.3",
+      "A.4",
+      "A.5",
+      "A.6"
+    ],
+    "include_descendants_chars": 43813,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'A.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C3_Voyager",
+    "section_id": "A.3",
+    "title": "A.3 Automatic Curriculum",
+    "depth": 2,
+    "char_start": 67515,
+    "pos_frac": 0.560313705962903,
+    "next_title": "A.3.1 Components in the Prompt",
+    "gap_chars": 1,
+    "prev_gap": 647,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "8df1d0199099b362e0d03d210ca3d818ae13b11c8b78f0760140fba796c1db05"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "bca250688d518e616e0086a900b9e20c33ba65cdae34e9a3714eb5231de84865"
+    },
+    "children": [
+      "A.3.1",
+      "A.3.2",
+      "A.3.3",
+      "A.3.4"
+    ],
+    "include_descendants_chars": 11156,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'A.3.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C3_Voyager",
+    "section_id": "A.4",
+    "title": "A.4 Skill Library",
+    "depth": 2,
+    "char_start": 78671,
+    "pos_frac": 0.6528984605170339,
+    "next_title": "A.4.1 Components in the Prompt",
+    "gap_chars": 1,
+    "prev_gap": 7826,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "bc968948dc7f7bb3b1f8baad12672f51d89f7ed00ac41ef5473a2b250ad9229d"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "d8b0df8ae04f642d53ac59f5fdea81a9cdbab384f302fbe63273808dfdef91ba"
+    },
+    "children": [
+      "A.4.1",
+      "A.4.2",
+      "A.4.3"
+    ],
+    "include_descendants_chars": 24386,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'A.4.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C3_Voyager",
+    "section_id": "A.5",
+    "title": "A.5 Self-Verification",
+    "depth": 2,
+    "char_start": 103057,
+    "pos_frac": 0.8552803020872235,
+    "next_title": "A.5.1 Components in the Prompt",
+    "gap_chars": 1,
+    "prev_gap": 5243,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "ea3125eeffbe7123fda0284a42fdf00cfb5acccfa94c0823e23a1cba32d81e0d"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "e40b19c14f0335f900290c3cfedc5111a62bbfb9ee5974001b2c59b86600db42"
+    },
+    "children": [
+      "A.5.1",
+      "A.5.2"
+    ],
+    "include_descendants_chars": 5330,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'A.5.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C3_Voyager",
+    "section_id": "B",
+    "title": "B Experiments",
+    "depth": 1,
+    "char_start": 109294,
+    "pos_frac": 0.9070417859662226,
+    "next_title": "B.1 Experimental Setup",
+    "gap_chars": 1,
+    "prev_gap": 848,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "1aa15ea0aa92df59a7cac7f8215116d52cbf65864ef431dfe5995b2c30171117"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "8126763fd74fec8ac124c3ca30baa020e42745ce064adae6a8f83cd25ac9c076"
+    },
+    "children": [
+      "B.1",
+      "B.2",
+      "B.3",
+      "B.4"
+    ],
+    "include_descendants_chars": 11201,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'B.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C3_Voyager",
+    "section_id": "B.4",
+    "title": "B.4 Evaluation Results",
+    "depth": 2,
+    "char_start": 113525,
+    "pos_frac": 0.9421552761525375,
+    "next_title": "B.4.1 Significantly Better Exploration",
+    "gap_chars": 1,
+    "prev_gap": 1419,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "155aad975d37db7d08740a64460d29b1a98a58475a0ab7255aa78c449b302133"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "6b0806af713ee22d47b22ca77f85e6882568738b6d91affee473601465676566"
+    },
+    "children": [
+      "B.4.1",
+      "B.4.2",
+      "B.4.3",
+      "B.4.4",
+      "B.4.5"
+    ],
+    "include_descendants_chars": 6970,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'B.4.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "6",
+    "title": "6 Evaluation",
+    "depth": 1,
+    "char_start": 39819,
+    "pos_frac": 0.1377581733264141,
+    "next_title": "6.1 English NLP tasks",
+    "gap_chars": 1,
+    "prev_gap": 1307,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "e75a65c192ab76efbe934fb4e00fb37dec1185b11a0ef31518a7dcd7144b3a36"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "af63bb7c43616fe36798de7cd48cd5b4ed1a7e605aa7fd45f4fa3772cf83ae1c"
+    },
+    "children": [
+      "6.1",
+      "6.2",
+      "6.4"
+    ],
+    "include_descendants_chars": 40515,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section '6.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "39",
+    "title": "39",
+    "depth": 1,
+    "char_start": 140785,
+    "pos_frac": 0.4870610620999827,
+    "next_title": "10 Representational Bias Analysis",
+    "gap_chars": 1,
+    "prev_gap": 919,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "2b20287926e7beac9fbc8c117bec8fa9fe534675155dad86b52f41fd8de4cc36"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "41121af52f6d4e08c79ce64ff0ce0b0ea49876d7e4693b530ec103b41129df6b"
+    },
+    "children": [],
+    "include_descendants_chars": 3,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is numeric/punctuation-only"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "10.1",
+    "title": "10.1 Distributional bias in social groups",
+    "depth": 2,
+    "char_start": 141550,
+    "pos_frac": 0.48970766303407715,
+    "next_title": "10.1.1 Gender and occupation bias",
+    "gap_chars": 1,
+    "prev_gap": 729,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "2bef961a74422378417f6109e69962826fe9620c8b393c01be1edb8a78be8f60"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "b5aa295b4b4642ad705cc9142b5d536153870be9b28c69ec1a51931b4c4b6ba6"
+    },
+    "children": [
+      "10.1.1",
+      "10.1.2"
+    ],
+    "include_descendants_chars": 12822,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section '10.1.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "input-s-the-model-takes-text",
+    "title": "Input(s) The model takes text as input.",
+    "depth": 1,
+    "char_start": 260765,
+    "pos_frac": 0.902144957619789,
+    "next_title": "Output(s) The model generates text as output.",
+    "gap_chars": 1,
+    "prev_gap": 204,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "e0d11bc48ddc20ccec3ffecfcb8e25b1affa187dffb7b83680753322a2ccede2"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "dc53f0716f6a682dd07b6065bf3bd50dfc41a67be2a536f3c18ff08b3940f770"
+    },
+    "children": [],
+    "include_descendants_chars": 40,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is a period-terminated sentence of more than four words"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "output-s-the-model-generates-text",
+    "title": "Output(s) The model generates text as output.",
+    "depth": 1,
+    "char_start": 260805,
+    "pos_frac": 0.902283341982356,
+    "next_title": "Usage",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "78047aef0e86bb6a000a5f6930ef08b55e9f7e08bb9ebc2cbeecc8eb139a14b7"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "2949ff86b7eaf0631fde12934fb00f59685bb734b5ad21a6f29514211d083e18"
+    },
+    "children": [],
+    "include_descendants_chars": 46,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is a period-terminated sentence of more than four words"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "usage",
+    "title": "Usage",
+    "depth": 1,
+    "char_start": 260851,
+    "pos_frac": 0.902442483999308,
+    "next_title": "Application",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "d567faed319f2ca840d0f03076a3d8c4c00c3c463e15216f8c0c9cbc701a479a"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "0edb1c09722ef27b59bae0f1c225d0d9020f9d50b3f40c2d361d82fde5ba36df"
+    },
+    "children": [],
+    "include_descendants_chars": 6,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "H",
+    "title": "H Additional Results",
+    "depth": 1,
+    "char_start": 280089,
+    "pos_frac": 0.9689984431759211,
+    "next_title": "H.1 English NLP tasks on smaller models",
+    "gap_chars": 1,
+    "prev_gap": 2258,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "1a6e58f1e54b771083caae7b7671106e33b577aa3adff31c7be4de147217bcec"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "48caed66bf6b97aff171cae83582c014a3c625d762857085eaf0e2352e49e198"
+    },
+    "children": [
+      "H.1"
+    ],
+    "include_descendants_chars": 84,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'H.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "task-palm",
+    "title": "Task PaLM",
+    "depth": 1,
+    "char_start": 280173,
+    "pos_frac": 0.9692890503373118,
+    "next_title": "8B",
+    "gap_chars": 1,
+    "prev_gap": 24,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "015cfbf88afd67ec0b0d58cf22412bd840a194014328920c5c16e02ccf2de678"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "18b491bd1eedf398506e5a7157474ab51b1dee2049ae9b7950fdb027da598cfd"
+    },
+    "children": [],
+    "include_descendants_chars": 10,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "8b",
+    "title": "8B",
+    "depth": 1,
+    "char_start": 280183,
+    "pos_frac": 0.9693236464279537,
+    "next_title": "PaLM",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "acff438688672953d9eae905ab06be063b32de06a97472ac6f54e407edc7cece"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "73b9003b28e75a1e6e85e44cee7de070693f9b45448a90626884a3b0b171e222"
+    },
+    "children": [],
+    "include_descendants_chars": 3,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is a model-size token"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "palm",
+    "title": "PaLM",
+    "depth": 1,
+    "char_start": 280186,
+    "pos_frac": 0.9693340252551461,
+    "next_title": "62B",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "d14e697c43e4a8b12d0974d6709dfba216f10138a7183acc0b14f56eea901971"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "d0d38588d533eaa8ea51cf2faa521128431dbe5065bd8fd97aef48589f6cccb9"
+    },
+    "children": [],
+    "include_descendants_chars": 5,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "62b",
+    "title": "62B",
+    "depth": 1,
+    "char_start": 280191,
+    "pos_frac": 0.969351323300467,
+    "next_title": "PaLM",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "d1d1292d215555b410f071ef7f9aadc1b83f560833d10834e48ccacf6b1e6ccb"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "2de9e5009e89e235ae29878c66cab5b4a3bf09f97532c63473a76ebd12101b61"
+    },
+    "children": [],
+    "include_descendants_chars": 4,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is a model-size token"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "palm#2",
+    "title": "PaLM",
+    "depth": 1,
+    "char_start": 280195,
+    "pos_frac": 0.9693651617367237,
+    "next_title": "540B",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "8d840cc0554ef44af00bfda8e70837bf2dc3afe68ae33d0a1f2ad567195c7a66"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "946dfaef519a2f3601d4a70fdc3e72ca92d0f8123b5825aaa76885ce14fb1f6b"
+    },
+    "children": [],
+    "include_descendants_chars": 5,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "540b",
+    "title": "540B",
+    "depth": 1,
+    "char_start": 280200,
+    "pos_frac": 0.9693824597820446,
+    "next_title": "PaLM",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "1d70542ba07e0b6319b436c145b69368ddce2ed337bc953392bf2c3ad3c8a661"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "2494ad10f0feb4872e188a09bee5c0ec041a681df6f13c8e02e72c7d1e2ae719"
+    },
+    "children": [],
+    "include_descendants_chars": 5,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is a model-size token"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "palm#3",
+    "title": "PaLM",
+    "depth": 1,
+    "char_start": 280205,
+    "pos_frac": 0.9693997578273655,
+    "next_title": "8B",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "a214b4125b290745d2de9caf1b34e234ab11172ed0e4badd4c172ad2d062362d"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "16c7c045fd7a81ff82afc6c5d93b01e5d967701b3178f6aed2ed2f0d8405d33b"
+    },
+    "children": [],
+    "include_descendants_chars": 5,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "8b#2",
+    "title": "8B",
+    "depth": 1,
+    "char_start": 280210,
+    "pos_frac": 0.9694170558726863,
+    "next_title": "PaLM",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "029b2d38b74f446df7e2f78eaead4e2c3f7809de40adf95f5d2270e4a1fa7ac1"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "c519d068d357c31628a7bcb5377d45613346435d541ef42b95938fc5505cac2a"
+    },
+    "children": [],
+    "include_descendants_chars": 3,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is a model-size token"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "palm#4",
+    "title": "PaLM",
+    "depth": 1,
+    "char_start": 280213,
+    "pos_frac": 0.9694274346998789,
+    "next_title": "62B",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "e10c31111af9040cfb3da5daf43fa4f4fa911dcd3d38d8d3bed163d4b47180f8"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "43a50d32ef253a279d81530f161f2e52d07fe435cd3d11ec10986c81475138c1"
+    },
+    "children": [],
+    "include_descendants_chars": 5,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "62b#2",
+    "title": "62B",
+    "depth": 1,
+    "char_start": 280218,
+    "pos_frac": 0.9694447327451998,
+    "next_title": "PaLM",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "3326783b5f67f4d6b4610fcf2c94fe42c8cd8dd361d37ed4a512a361968f39ba"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "4beab543b2fe403da18988a126e367a1a46b7f1878aa6f40a9a969d3db2cdae9"
+    },
+    "children": [],
+    "include_descendants_chars": 4,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is a model-size token"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "540b#2",
+    "title": "540B",
+    "depth": 1,
+    "char_start": 280236,
+    "pos_frac": 0.9695070057083549,
+    "next_title": "PaLM",
+    "gap_chars": 1,
+    "prev_gap": 10,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "43631cb7f1c37ceb658b00a042bf46f5702ee922c94a2aa5290f9c65722e94b6"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "010fdd1f7b3ea3c8f69cc95087597382a3caba88e0914b571a54b9479814f3d5"
+    },
+    "children": [],
+    "include_descendants_chars": 5,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is a model-size token"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "palm#6",
+    "title": "PaLM",
+    "depth": 1,
+    "char_start": 280241,
+    "pos_frac": 0.9695243037536758,
+    "next_title": "8B",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "0beb090755011f328245e667539d4a743cb4a737c99febcfe5105ebd45c8cf58"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "249143a70d10d3f650e400e8a5968ffdcb5d765e9cc043ea0fa851d15f4217a8"
+    },
+    "children": [],
+    "include_descendants_chars": 5,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "8b#3",
+    "title": "8B",
+    "depth": 1,
+    "char_start": 280246,
+    "pos_frac": 0.9695416017989967,
+    "next_title": "PaLM",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "6f6cbea5861873968cc855f22820c3d2f556a551fea075f417e635f77f02f68f"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "41d50431bfab886c4b0b35f1265ffe467973b00e2fd8c0ec5951cabe6d58a14a"
+    },
+    "children": [],
+    "include_descendants_chars": 3,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is a model-size token"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "palm#7",
+    "title": "PaLM",
+    "depth": 1,
+    "char_start": 280249,
+    "pos_frac": 0.9695519806261892,
+    "next_title": "62B",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "a2cb5c1653e5421f606118e293173cc46c7e4d6b5a682589f3f998ce933a99c1"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "49edee54b742d9d5af657189cae29d02035866ec0dad1acefdf5040165ead58b"
+    },
+    "children": [],
+    "include_descendants_chars": 5,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "62b#3",
+    "title": "62B",
+    "depth": 1,
+    "char_start": 280254,
+    "pos_frac": 0.9695692786715101,
+    "next_title": "PaLM",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "6a73b737292988568d33b349317529c1516ea9f24cfea8ee3d25246372d8c21d"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "56c4d737ba47ca3130f668199ba5a3c78e762e339504d6d47bcdc7ba16ea8694"
+    },
+    "children": [],
+    "include_descendants_chars": 4,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is a model-size token"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "palm#8",
+    "title": "PaLM",
+    "depth": 1,
+    "char_start": 280258,
+    "pos_frac": 0.9695831171077668,
+    "next_title": "540B",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "814cae0d6a23aa0ab885543d3853ece4e8c1a3333d5eb14ad649349158cd29ae"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "4d47d178a1f26bb34f1fcea5ee40794b56a917f22372ce5187c87923711e5a18"
+    },
+    "children": [],
+    "include_descendants_chars": 5,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "t5",
+    "title": "T5",
+    "depth": 1,
+    "char_start": 285900,
+    "pos_frac": 0.9891022314478464,
+    "next_title": "XXL",
+    "gap_chars": 1,
+    "prev_gap": 5633,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "897b13f899bd4774ad5fe764212493e47ea87f6ac79538eb449e48a33e8083ac"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "378f38dce3353edee0267f15a31268ac070990703927918034ac0a37aa0ceb76"
+    },
+    "children": [],
+    "include_descendants_chars": 3,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "xxl",
+    "title": "XXL",
+    "depth": 1,
+    "char_start": 285903,
+    "pos_frac": 0.9891126102750389,
+    "next_title": "PaLM",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "b011412f75830d8a4ea1b37a065809a23a9046a7f86aa428ba46bde0dceefb02"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "231a3705a1b576c924126597cfce23664cda147d6a53a6ab9d6d5218a2fc0cba"
+    },
+    "children": [],
+    "include_descendants_chars": 4,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "8b#4",
+    "title": "8B",
+    "depth": 1,
+    "char_start": 288147,
+    "pos_frac": 0.9968759730150493,
+    "next_title": "PaLM",
+    "gap_chars": 1,
+    "prev_gap": 2236,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "5801054be65f4faaa94bba6e0614c36c8e306e84f082fb181c97682c094ac896"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "9a5e47cd2bfd7871bee20f16677b84dd590f357dc249b35cafc187f7025107ff"
+    },
+    "children": [],
+    "include_descendants_chars": 3,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is a model-size token"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "palm#10",
+    "title": "PaLM",
+    "depth": 1,
+    "char_start": 288150,
+    "pos_frac": 0.9968863518422418,
+    "next_title": "62B",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "f7c6b824a8b9406ae20e547e77f80a8b020e432e48fb37201099967a4c9ed73d"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "2a33f07e4f0a5203291b0b0f28e39620acfb238e10c5671195740a792b013372"
+    },
+    "children": [],
+    "include_descendants_chars": 5,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "62b#4",
+    "title": "62B",
+    "depth": 1,
+    "char_start": 288155,
+    "pos_frac": 0.9969036498875627,
+    "next_title": "PaLM",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "c902802383738856c4b3b42f3094b9151c8891da1119cd5483111c847e21f219"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "404d9bcefd6bbb19c820adec15ad92259d396de662134b197489ba1b757a06d8"
+    },
+    "children": [],
+    "include_descendants_chars": 4,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is a model-size token"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "palm#11",
+    "title": "PaLM",
+    "depth": 1,
+    "char_start": 288159,
+    "pos_frac": 0.9969174883238194,
+    "next_title": "540B",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "7a2f216423606d23b524c6ebb2f575e6a784bab69bf032f5f0060ad57e278652"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "0f88157fe2b7ee38dee73e9fe6f70f2a6c552c8694760ba230e4688a0771260a"
+    },
+    "children": [],
+    "include_descendants_chars": 5,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "540b#4",
+    "title": "540B",
+    "depth": 1,
+    "char_start": 288164,
+    "pos_frac": 0.9969347863691402,
+    "next_title": "T5",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "4a3e6152e98b2c32a7cc36756659eefd9dc59c926860c75f6626858807cb23a4"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "4f4950cef1f4b3bb79de73fb4c27110d827c9962ba05efd2c9f4202bad69da28"
+    },
+    "children": [],
+    "include_descendants_chars": 5,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is a model-size token"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "t5#2",
+    "title": "T5",
+    "depth": 1,
+    "char_start": 288169,
+    "pos_frac": 0.9969520844144611,
+    "next_title": "XXL",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "d1fdad6e24be5d8a7dfcd8b44ddd00c7404d04c98a830479f8fa16eec48aff83"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "d99c44b67f5412e829c004b1d6713a4322ad5b32940c56a041da3af2b261ea2d"
+    },
+    "children": [],
+    "include_descendants_chars": 3,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "xxl#2",
+    "title": "XXL",
+    "depth": 1,
+    "char_start": 288172,
+    "pos_frac": 0.9969624632416537,
+    "next_title": "PaLM",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "783a9a83b3b3ca023d766387651dcb6e339851e3df34820ead007304107a2745"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "7fb5348713bb10f84d13bb735cfc3c29124f8f9531beb0e4eadd9a94c96106c8"
+    },
+    "children": [],
+    "include_descendants_chars": 4,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "C6_PaLM",
+    "section_id": "palm#12",
+    "title": "PaLM",
+    "depth": 1,
+    "char_start": 288176,
+    "pos_frac": 0.9969763016779104,
+    "next_title": "8B",
+    "gap_chars": 1,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "c852f2455369d605c91ed6683ac1809b199d89cfc6e09f219c304129280d14fd"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "6eebe68755a6193800ed156bc6537e536cabdde820b76dd6011385ad2a355cbe"
+    },
+    "children": [],
+    "include_descendants_chars": 5,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is an uppercase-initial label of at most two words"
+    ]
+  },
+  {
+    "paper_id": "C7_SparksAGI",
+    "section_id": "contents",
+    "title": "Contents",
+    "depth": 1,
+    "char_start": 1998,
+    "pos_frac": 0.003947532199652664,
+    "next_title": "1 Introduction",
+    "gap_chars": 1,
+    "prev_gap": 1706,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "90dae34a7aeff40119a0d6a4935dfcb4f41328972e4d6521cefa3e0bb7bffeb5"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "053d114d449a2bbbb500d83ed4ef72f592432de68f1b05741c0d8de1b2fc1b0c"
+    },
+    "children": [],
+    "include_descendants_chars": 9,
+    "include_descendants_has_content": false,
+    "classification": "b_toc_residue",
+    "confidence_tier": "directly_proven",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "pos_frac=0.003948 is below 0.15",
+      "context contains a Contents label or dot-leader page-list text"
+    ]
+  },
+  {
+    "paper_id": "C7_SparksAGI",
+    "section_id": "1",
+    "title": "1 Introduction",
+    "depth": 1,
+    "char_start": 2007,
+    "pos_frac": 0.003965313876227676,
+    "next_title": "1.1 Our approach to studying GPT-4’s intelligence",
+    "gap_chars": 3,
+    "prev_gap": 1,
+    "match_level": "L1",
+    "is_standalone": false,
+    "context_before": {
+      "chars": 120,
+      "sha256": "992f779d53d2ebc9ce5f2cabad8aa34f4de12dfa4d3a3eb96ba89b4f8598439b"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "28d95680cd784a58de867996f32e9480e631e6dee62be109d03ee0a0017b9748"
+    },
+    "children": [
+      "1.1",
+      "1.2"
+    ],
+    "include_descendants_chars": 227,
+    "include_descendants_has_content": true,
+    "classification": "b_toc_residue",
+    "confidence_tier": "directly_proven",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "pos_frac=0.003965 is below 0.15",
+      "context contains a Contents label or dot-leader page-list text"
+    ]
+  },
+  {
+    "paper_id": "C7_SparksAGI",
+    "section_id": "1.1",
+    "title": "1.1 Our approach to studying GPT-4’s intelligence",
+    "depth": 2,
+    "char_start": 2024,
+    "pos_frac": 0.003998901487536032,
+    "next_title": "1.2 Organization of our demonstration",
+    "gap_chars": 55,
+    "prev_gap": 3,
+    "match_level": "L1",
+    "is_standalone": false,
+    "context_before": {
+      "chars": 120,
+      "sha256": "66e471c49ac7d1ecfaf49f1c05aea30f7bae02f329912acd89b02b6d405ccfe7"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "0e94640e389cdd6261eb53f93f1819dace5557b092138b35e22944b396199781"
+    },
+    "children": [],
+    "include_descendants_chars": 104,
+    "include_descendants_has_content": false,
+    "classification": "b_toc_residue",
+    "confidence_tier": "directly_proven",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "pos_frac=0.003999 is below 0.15",
+      "context contains a Contents label or dot-leader page-list text"
+    ]
+  },
+  {
+    "paper_id": "C7_SparksAGI",
+    "section_id": "1.2",
+    "title": "1.2 Organization of our demonstration",
+    "depth": 2,
+    "char_start": 2128,
+    "pos_frac": 0.004204378639069505,
+    "next_title": "2 Multimodal and interdisciplinary composition",
+    "gap_chars": 69,
+    "prev_gap": 55,
+    "match_level": "L1",
+    "is_standalone": false,
+    "context_before": {
+      "chars": 120,
+      "sha256": "13997cf70b3203c60d700393cf4291957cc2a973c599a46a0d9ae384d571b169"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "2686ffe9c98091e56cfd31b21f983cec52effd192d3c88689b00ea93c6306487"
+    },
+    "children": [],
+    "include_descendants_chars": 106,
+    "include_descendants_has_content": false,
+    "classification": "b_toc_residue",
+    "confidence_tier": "directly_proven",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "pos_frac=0.004204 is below 0.15",
+      "context contains a Contents label or dot-leader page-list text"
+    ]
+  },
+  {
+    "paper_id": "C7_SparksAGI",
+    "section_id": "2",
+    "title": "2 Multimodal and interdisciplinary composition",
+    "depth": 1,
+    "char_start": 2234,
+    "pos_frac": 0.004413807274286313,
+    "next_title": "2.1 Integrative ability",
+    "gap_chars": 4,
+    "prev_gap": 69,
+    "match_level": "L1",
+    "is_standalone": false,
+    "context_before": {
+      "chars": 120,
+      "sha256": "3301a350a2c0d963992c4ff0ac7df8c78bcf713d460ab8218b23d0c7d2fd2dd7"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "2ba4bf227dcbd0b32d5af82a70a027bf7a368e09d3dc20114dfc7e3502d38321"
+    },
+    "children": [
+      "2.1",
+      "2.2",
+      "1.1#2",
+      "1.2#2"
+    ],
+    "include_descendants_chars": 30413,
+    "include_descendants_has_content": true,
+    "classification": "b_toc_residue",
+    "confidence_tier": "directly_proven",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "pos_frac=0.004414 is below 0.15",
+      "context contains a Contents label or dot-leader page-list text"
+    ]
+  },
+  {
+    "paper_id": "C7_SparksAGI",
+    "section_id": "2.1",
+    "title": "2.1 Integrative ability",
+    "depth": 2,
+    "char_start": 2284,
+    "pos_frac": 0.004512594366369712,
+    "next_title": "2.2 Vision",
+    "gap_chars": 90,
+    "prev_gap": 4,
+    "match_level": "L1",
+    "is_standalone": false,
+    "context_before": {
+      "chars": 120,
+      "sha256": "fdcd08f6ef64faadb9c5cc56c8b06d9c5426f136adc4bc41cd561aa469e5b2ec"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "e506635e968a3f71e4e45480ff8018e675db40f5f00a3235c113eb4f71be992f"
+    },
+    "children": [],
+    "include_descendants_chars": 113,
+    "include_descendants_has_content": false,
+    "classification": "b_toc_residue",
+    "confidence_tier": "directly_proven",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "pos_frac=0.004513 is below 0.15",
+      "context contains a Contents label or dot-leader page-list text"
+    ]
+  },
+  {
+    "paper_id": "C7_SparksAGI",
+    "section_id": "2.2",
+    "title": "2.2 Vision",
+    "depth": 2,
+    "char_start": 2397,
+    "pos_frac": 0.0047358531944781965,
+    "next_title": "2.2.1 Image generation beyond memorization",
+    "gap_chars": 102,
+    "prev_gap": 90,
+    "match_level": "L1",
+    "is_standalone": false,
+    "context_before": {
+      "chars": 120,
+      "sha256": "4bb5cd44539e3a2c27e87cca97a03b30bf12145a624ff2e856ed3fc9a6c05a09"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "73624f8731ad4e3b2e02761e7268c9f63028c2c252cadeafcfdb1ab481c89e70"
+    },
+    "children": [
+      "2.2.1"
+    ],
+    "include_descendants_chars": 18722,
+    "include_descendants_has_content": true,
+    "classification": "b_toc_residue",
+    "confidence_tier": "directly_proven",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "pos_frac=0.004736 is below 0.15",
+      "context contains a Contents label or dot-leader page-list text"
+    ]
+  },
+  {
+    "paper_id": "C7_SparksAGI",
+    "section_id": "3.1",
+    "title": "3.1 From instructions to code",
+    "depth": 2,
+    "char_start": 70881,
+    "pos_frac": 0.14004255747926952,
+    "next_title": "3.1.1 Coding challenges",
+    "gap_chars": 1,
+    "prev_gap": 1944,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "069db145e496316d0cf59cae6f76ca7ed9ac037b59cf499ebc7972e5432cbead"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "5c3d78fb0858bc7be2dd12ade6ebe211f925b3e2799542e2e6792389aecf76f1"
+    },
+    "children": [
+      "3.1.1",
+      "3.1.2"
+    ],
+    "include_descendants_chars": 11059,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section '3.1.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C7_SparksAGI",
+    "section_id": "6",
+    "title": "6 Interaction with humans",
+    "depth": 1,
+    "char_start": 190223,
+    "pos_frac": 0.375831540347612,
+    "next_title": "6.1 Understanding Humans: Theory of Mind",
+    "gap_chars": 1,
+    "prev_gap": 750,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "523f5cdb914d1dfde747b7819eebd6a534bb505597279caa8c639075a6b1d678"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "68c284b1f2614ce53dcc03c3fbdad252b9458ee2ef767b02a5f586e9a796287d"
+    },
+    "children": [
+      "6.1"
+    ],
+    "include_descendants_chars": 5684,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section '6.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C7_SparksAGI",
+    "section_id": "91",
+    "title": "91",
+    "depth": 1,
+    "char_start": 321494,
+    "pos_frac": 0.6351891476452121,
+    "next_title": "10 Directions and Conclusions",
+    "gap_chars": 1,
+    "prev_gap": 3705,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "1a3e63271a4197ab9a90395d0b5b19d29ff7d3548cef76b7cdfc8f064b95b949"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "ed98d1b7430bc7741a824a95e50ccc772cb699e0782bdd9eadbac587d05f74d6"
+    },
+    "children": [],
+    "include_descendants_chars": 3,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is numeric/punctuation-only"
+    ]
+  },
+  {
+    "paper_id": "C7_SparksAGI",
+    "section_id": "B",
+    "title": "B Appendix for multimodal and interdisciplinary composition",
+    "depth": 1,
+    "char_start": 369945,
+    "pos_frac": 0.7309158156158684,
+    "next_title": "B.1 Further details on integrative ability results",
+    "gap_chars": 1,
+    "prev_gap": 32013,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "23038b044c3965fe703cc3f514293fd5f106df5ff230623f101c01d3a2daa120"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "5fc94e3e92bf078e417811c349432e4a2aade0a935700d627cd24c506d122d01"
+    },
+    "children": [
+      "B.1",
+      "B.3"
+    ],
+    "include_descendants_chars": 15453,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'B.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C7_SparksAGI",
+    "section_id": "C",
+    "title": "C Appendix for the Coding section",
+    "depth": 1,
+    "char_start": 385398,
+    "pos_frac": 0.761446954295164,
+    "next_title": "C.1 Measuring human performance on LeetCode",
+    "gap_chars": 1,
+    "prev_gap": 3858,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "083dbe8e710de2342f039f3ce4c0544b03a93c0182707159298701c73a134bab"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "d4f33634f60c979d9526a7c76676d6f9920656e1ed99e975899a39b3afcd5c57"
+    },
+    "children": [
+      "C.1",
+      "C.2",
+      "C.5",
+      "C.6",
+      "C.7"
+    ],
+    "include_descendants_chars": 30535,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'C.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C7_SparksAGI",
+    "section_id": "D",
+    "title": "D Additional examples for mathematical reasoning",
+    "depth": 1,
+    "char_start": 415933,
+    "pos_frac": 0.8217762314304964,
+    "next_title": "D.1 Limitations",
+    "gap_chars": 1,
+    "prev_gap": 2043,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "5a96cd76c281de4daf8e3a20e855c80efe3ca3777079a9f40649751a6a53fbbb"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "51c96da3ded0a3e183a246feec0236f999a2880c6b66f1d0c355b2f710105285"
+    },
+    "children": [
+      "D.1",
+      "D.2",
+      "D.3"
+    ],
+    "include_descendants_chars": 44192,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'D.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C7_SparksAGI",
+    "section_id": "F",
+    "title": "F Additional examples for interaction with the world",
+    "depth": 1,
+    "char_start": 472178,
+    "pos_frac": 0.9329018313151131,
+    "next_title": "F.1 Interact with tools",
+    "gap_chars": 1,
+    "prev_gap": 12037,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "5c00e89e0ff11ed9b984c769238fbc3b532970d1afab338a7194d43ddac10dc5"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "0fe5b227031da3518ad1bca76c34d4b3e90ed29ec92ff7b4834dbcbb20c3e255"
+    },
+    "children": [
+      "F.1",
+      "F.2"
+    ],
+    "include_descendants_chars": 32444,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'F.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C7_SparksAGI",
+    "section_id": "F.2",
+    "title": "F.2 Examples for interaction with environments",
+    "depth": 2,
+    "char_start": 484803,
+    "pos_frac": 0.9578455720661715,
+    "next_title": "F.2.1 The first game in Section 5.2.2",
+    "gap_chars": 1,
+    "prev_gap": 12549,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "ae56960521ec811fc41396c16fb8a77b010b159b640fb8318b251f767809c948"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "8b3ccb9fc15cc569ad4b8ae8b4c7410105e4794e08a7f3e5ea1ea01b9c5560ba"
+    },
+    "children": [
+      "F.2.1"
+    ],
+    "include_descendants_chars": 19819,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'F.2.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "C7_SparksAGI",
+    "section_id": "G",
+    "title": "G Supplementary Materials: Discriminative Capabilities",
+    "depth": 1,
+    "char_start": 504622,
+    "pos_frac": 0.9970027996261897,
+    "next_title": "G.1 Misconceptions: Detailed Results",
+    "gap_chars": 1,
+    "prev_gap": 19735,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "ab1ab989bfa906e0c0811dd2f3f0ec973d709ec991492a28b7210c8c81c08ac0"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "5fe79e79007ae545342b1043ef5fe1c36779920bc78b1a5844432b19969450b3"
+    },
+    "children": [
+      "G.1"
+    ],
+    "include_descendants_chars": 1517,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'G.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "D1_LLM_Medicine",
+    "section_id": "A",
+    "title": "A SUPPLEMENTAL MATERIAL",
+    "depth": 1,
+    "char_start": 58897,
+    "pos_frac": 0.9608933990276373,
+    "next_title": "A.1 Proof of Proposition 1",
+    "gap_chars": 1,
+    "prev_gap": 9784,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "0cf9b914e9b301a586b683b2a7752798ead226531aaf0eea1101c6fcb83636bc"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "91c26af5e82340d66c4935ab86675fe2de8af4d04c5b00dda664895a2a82c6b0"
+    },
+    "children": [
+      "A.1",
+      "A.2",
+      "A.3"
+    ],
+    "include_descendants_chars": 2397,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'A.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  },
+  {
+    "paper_id": "D2_LLM_ResearchIdeas",
+    "section_id": "4#3",
+    "title": "4. Step-by-Step Experiment Plan (Continued):",
+    "depth": 1,
+    "char_start": 164656,
+    "pos_frac": 0.7001632875221119,
+    "next_title": "7. Evaluation",
+    "gap_chars": 1,
+    "prev_gap": 10485,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "cc7e690e47960fdc6a8860c5cfc428795f5c61f637343888d5ba1538dd6dc69a"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "f58663f3fabe86c58fbdb1c4e9ca34de4d780c5036c6a3acb8bc24f2a843c1ee"
+    },
+    "children": [],
+    "include_descendants_chars": 45,
+    "include_descendants_has_content": false,
+    "classification": "d_model_furniture",
+    "confidence_tier": "mechanical_shape_match",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "match_level=L1 and is_standalone=true",
+      "the section has no children",
+      "title is a numbered colon-terminated field label"
+    ]
+  },
+  {
+    "paper_id": "D3_LLM_Topics_Authors",
+    "section_id": "C.1",
+    "title": "C.1 Contribution Types",
+    "depth": 2,
+    "char_start": 69974,
+    "pos_frac": 0.8142381717051828,
+    "next_title": "C.1.1 Type: Artifact",
+    "gap_chars": 1,
+    "prev_gap": 4158,
+    "match_level": "L1",
+    "is_standalone": true,
+    "context_before": {
+      "chars": 120,
+      "sha256": "d88340d1dc04393d65d2b79b9725a83a67ae0bd3a175040a27618449e61556d4"
+    },
+    "context_after": {
+      "chars": 120,
+      "sha256": "2a8f54fda468ee82f36ac3ff1249800e6d9fd84dc8d765ef65ec40a7d7a336ce"
+    },
+    "children": [
+      "C.1.1",
+      "C.1.2"
+    ],
+    "include_descendants_chars": 4235,
+    "include_descendants_has_content": true,
+    "classification": "a_genuine_adjacent_headings",
+    "confidence_tier": "strongly_supported",
+    "classification_evidence": [
+      "direct body after the matched title is whitespace-only",
+      "the immediately following section 'C.1.1' is a direct child",
+      "match_level=L1 and is_standalone=true"
+    ]
+  }
+]

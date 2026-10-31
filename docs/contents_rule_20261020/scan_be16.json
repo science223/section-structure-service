@@ -1,0 +1,291 @@
+[
+ {
+  "file": "BE-001.pdf",
+  "chars": 461574,
+  "seconds": 0.0,
+  "from_cache": true,
+  "sections": 249,
+  "max_depth": 4,
+  "unlocated": [
+   "Appendices",
+   "10.2. Response Context Fields ###H### 10.2.1. Allow ###H### ",
+   "Appendices ###H### B.1. Changes from RFC 2818 ###H### B.2. C"
+  ],
+  "contents_skipped": 14,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "BE-002.pdf",
+  "chars": 139121,
+  "seconds": 1.3,
+  "from_cache": true,
+  "sections": 83,
+  "max_depth": 4,
+  "unlocated": [
+   "Abstract ###H### 1.  Introduction ###H### 1.1.  Prior Versio"
+  ],
+  "contents_skipped": 8,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "BE-003.pdf",
+  "chars": 376333,
+  "seconds": 27.7,
+  "from_cache": true,
+  "sections": 181,
+  "max_depth": 4,
+  "unlocated": [
+   "1.1. Document Structure ###H### 1.2. Terms and Definitions",
+   "10.3.3. Looping ###H### 11. Error Handling",
+   "17. Packet Formats ###H### 17.1. Packet Number Encoding and ",
+   "Version Negotiation Packet ###H### 17.2.2. Initial Packet",
+   "17.2.5. Retry Packet ###H### 5.8 (\"Retry Packet Integrity\") ",
+   "2. 21.1.3.2. Off-Path Active Attacks",
+   "2. 21.1.3.3. Limited On-Path Active Attacks",
+   "SHOULD",
+   "22.1. Provisional Registrations",
+   "Appendix A. Pseudocode ###H### A.1. Sample Variable-Length I"
+  ],
+  "contents_skipped": 44,
+  "repeats_skipped": 4,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "BE-004.pdf",
+  "chars": 117989,
+  "seconds": 0.1,
+  "from_cache": true,
+  "sections": 71,
+  "max_depth": 3,
+  "unlocated": [],
+  "contents_skipped": 26,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": [
+   "11.1: , , , , January 2008, ."
+  ]
+ },
+ {
+  "file": "BE-005.pdf",
+  "chars": 122410,
+  "seconds": 1.5,
+  "from_cache": true,
+  "sections": 51,
+  "max_depth": 3,
+  "unlocated": [
+   "Appendices",
+   "3.1. Packet Loss ###H### 3.2. Reordering ###H### 3.3. Fragme",
+   "8. Key Updates ###H### 9. Connection ID Updates"
+  ],
+  "contents_skipped": 14,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [
+   "authors-addresses"
+  ],
+  "short_leaves": []
+ },
+ {
+  "file": "BE-006.pdf",
+  "chars": 90609,
+  "seconds": 0.3,
+  "from_cache": true,
+  "sections": 38,
+  "max_depth": 3,
+  "unlocated": [
+   "5.1.  Security Statement"
+  ],
+  "contents_skipped": 16,
+  "repeats_skipped": 5,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": [
+   "6: This document has no IANA actions."
+  ]
+ },
+ {
+  "file": "BE-008.pdf",
+  "chars": 25019,
+  "seconds": 0.0,
+  "from_cache": true,
+  "sections": 20,
+  "max_depth": 2,
+  "unlocated": [],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "BE-009.pdf",
+  "chars": 61992,
+  "seconds": 0.3,
+  "from_cache": true,
+  "sections": 44,
+  "max_depth": 3,
+  "unlocated": [
+   "4.2.1. DNS Message IDs ###H### 4.3. DoQ Error Codes"
+  ],
+  "contents_skipped": 10,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "BE-010.pdf",
+  "chars": 99862,
+  "seconds": 0.2,
+  "from_cache": true,
+  "sections": 73,
+  "max_depth": 3,
+  "unlocated": [
+   "Appendices:"
+  ],
+  "contents_skipped": 17,
+  "repeats_skipped": 0,
+  "repeated_ids": [
+   "4.2#2"
+  ],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "BE-012.pdf",
+  "chars": 17776,
+  "seconds": 0.1,
+  "from_cache": true,
+  "sections": 16,
+  "max_depth": 2,
+  "unlocated": [
+   "Acknowledgments ###H### Authors' Addresses ###H### RFC 9221 "
+  ],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "BE-013.pdf",
+  "chars": 26512,
+  "seconds": 0.2,
+  "from_cache": true,
+  "sections": 15,
+  "max_depth": 2,
+  "unlocated": [
+   "Acknowledgments ###H### Authors' Addresses"
+  ],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "BE-014.pdf",
+  "chars": 86964,
+  "seconds": 0.2,
+  "from_cache": true,
+  "sections": 48,
+  "max_depth": 2,
+  "unlocated": [
+   "5.1. Authorization Server Metadata"
+  ],
+  "contents_skipped": 13,
+  "repeats_skipped": 0,
+  "repeated_ids": [
+   "7.2#2"
+  ],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "BE-015.pdf",
+  "chars": 33742,
+  "seconds": 0.0,
+  "from_cache": true,
+  "sections": 23,
+  "max_depth": 4,
+  "unlocated": [],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "BE-016.pdf",
+  "chars": 54254,
+  "seconds": 0.6,
+  "from_cache": true,
+  "sections": 46,
+  "max_depth": 3,
+  "unlocated": [
+   "1.1. Requirements Language ###H### 2. Terminology ###H### 2."
+  ],
+  "contents_skipped": 25,
+  "repeats_skipped": 1,
+  "repeated_ids": [
+   "8#2",
+   "11.2.2#2"
+  ],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "BE-017.pdf",
+  "chars": 19584,
+  "seconds": 0.0,
+  "from_cache": true,
+  "sections": 16,
+  "max_depth": 2,
+  "unlocated": [
+   "5.1. OAuth Considerations",
+   "1.1. Conventions and Terminology",
+   "2.1. Example Authorization Response",
+   "2.2. Example Error Response",
+   "2.3. Providing the Issuer Identifier",
+   "2.4. Validating the Issuer Identifier"
+  ],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "BE-018.pdf",
+  "chars": 152962,
+  "seconds": 0.6,
+  "from_cache": true,
+  "sections": 73,
+  "max_depth": 4,
+  "unlocated": [
+   "9.1. CBOR Considerations",
+   "Appendices",
+   "Appendices",
+   "G.3. Changes in Suggestions and Other Informational Componen"
+  ],
+  "contents_skipped": 15,
+  "repeats_skipped": 1,
+  "repeated_ids": [],
+  "empty_leaves": [
+   "less-than-24",
+   "24-25-26-or-27"
+  ],
+  "short_leaves": [
+   "28-29-30: 31:"
+  ]
+ }
+]

@@ -1,0 +1,438 @@
+[
+ {
+  "file": "DeepSeek-V3_Technical_Report.txt",
+  "chars": 150625,
+  "model_s": 4.3,
+  "from_cache": true,
+  "old_sections": 55,
+  "new_sections": 54,
+  "old_dropped": 9,
+  "new_dropped": 10,
+  "old_dup_ids": 2,
+  "new_dup_ids": 1,
+  "same": false,
+  "only_old": [
+   [
+    "3.2.3",
+    2599
+   ],
+   [
+    "3.2.3#2",
+    38100
+   ]
+  ],
+  "only_new": [
+   [
+    "3.2.3",
+    38100
+   ]
+  ]
+ },
+ {
+  "file": "Efficient_Large_Language_Models_A_Survey.txt",
+  "chars": 279607,
+  "model_s": 0.3,
+  "from_cache": true,
+  "old_sections": 36,
+  "new_sections": 36,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 0,
+  "new_dup_ids": 0,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Evaluating_LLMs_Systematic_Survey.txt",
+  "chars": 126626,
+  "model_s": 0.0,
+  "from_cache": true,
+  "old_sections": 36,
+  "new_sections": 36,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 0,
+  "new_dup_ids": 0,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Evaluation_of_Multimodal_LLMs_A_Survey.txt",
+  "chars": 110493,
+  "model_s": 0.0,
+  "from_cache": true,
+  "old_sections": 26,
+  "new_sections": 26,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 0,
+  "new_dup_ids": 0,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Foundation_Models_in_Medicine_A_Survey.txt",
+  "chars": 196799,
+  "model_s": 1.0,
+  "from_cache": true,
+  "old_sections": 60,
+  "new_sections": 60,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 27,
+  "new_dup_ids": 27,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Hallucination_in_LLMs_Principles_Taxonomy_Survey.txt",
+  "chars": 276966,
+  "model_s": 1.0,
+  "from_cache": true,
+  "old_sections": 56,
+  "new_sections": 56,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 0,
+  "new_dup_ids": 0,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Hallucination_Mitigation_Techniques_LLMs_A_Survey.txt",
+  "chars": 74827,
+  "model_s": 0.0,
+  "from_cache": true,
+  "old_sections": 16,
+  "new_sections": 16,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 0,
+  "new_dup_ids": 0,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Hallucination_of_Multimodal_LLMs_A_Survey.txt",
+  "chars": 176334,
+  "model_s": 0.2,
+  "from_cache": true,
+  "old_sections": 40,
+  "new_sections": 40,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 0,
+  "new_dup_ids": 0,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Internal_Consistency_Self_Feedback_LLMs_A_Survey.txt",
+  "chars": 117773,
+  "model_s": 0.2,
+  "from_cache": true,
+  "old_sections": 51,
+  "new_sections": 51,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 32,
+  "new_dup_ids": 32,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Large_Language_Models_A_Survey.txt",
+  "chars": 208829,
+  "model_s": 2.1,
+  "from_cache": true,
+  "old_sections": 49,
+  "new_sections": 49,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 24,
+  "new_dup_ids": 24,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Large_Multimodal_Reasoning_Models_A_Survey.txt",
+  "chars": 380425,
+  "model_s": 22.5,
+  "from_cache": true,
+  "old_sections": 97,
+  "new_sections": 96,
+  "old_dropped": 7,
+  "new_dropped": 8,
+  "old_dup_ids": 55,
+  "new_dup_ids": 54,
+  "same": false,
+  "only_old": [
+   [
+    "3.2.1",
+    3286
+   ],
+   [
+    "3.2.1#2",
+    43936
+   ]
+  ],
+  "only_new": [
+   [
+    "3.2.1",
+    43936
+   ]
+  ]
+ },
+ {
+  "file": "LLM_based_Autonomous_Agents_A_Survey.txt",
+  "chars": 151663,
+  "model_s": 1.0,
+  "from_cache": true,
+  "old_sections": 20,
+  "new_sections": 20,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 0,
+  "new_dup_ids": 0,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "LLM_based_Human_Agent_Systems_A_Survey.txt",
+  "chars": 136997,
+  "model_s": 0.0,
+  "from_cache": true,
+  "old_sections": 36,
+  "new_sections": 36,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 0,
+  "new_dup_ids": 0,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "LLM_based_Multi_Agents_A_Survey.txt",
+  "chars": 78647,
+  "model_s": 0.2,
+  "from_cache": true,
+  "old_sections": 35,
+  "new_sections": 35,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 0,
+  "new_dup_ids": 0,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Long_Context_LLMs_Beyond_the_Limits_Survey.txt",
+  "chars": 65268,
+  "model_s": 0.4,
+  "from_cache": true,
+  "old_sections": 8,
+  "new_sections": 8,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 0,
+  "new_dup_ids": 0,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Multimodal_Large_Language_Models_A_Survey.txt",
+  "chars": 113954,
+  "model_s": 0.3,
+  "from_cache": true,
+  "old_sections": 39,
+  "new_sections": 39,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 0,
+  "new_dup_ids": 0,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Optimization_of_LLM_based_Agents_A_Survey.txt",
+  "chars": 153822,
+  "model_s": 1.9,
+  "from_cache": true,
+  "old_sections": 48,
+  "new_sections": 48,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 2,
+  "new_dup_ids": 2,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Prompt_Engineering_LLMs_Systematic_Survey.txt",
+  "chars": 67636,
+  "model_s": 0.0,
+  "from_cache": true,
+  "old_sections": 27,
+  "new_sections": 27,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 0,
+  "new_dup_ids": 0,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Qwen2.5-1M_Technical_Report.txt",
+  "chars": 67706,
+  "model_s": 0.0,
+  "from_cache": true,
+  "old_sections": 21,
+  "new_sections": 21,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 0,
+  "new_dup_ids": 0,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Qwen2.5-Omni_Technical_Report.txt",
+  "chars": 70819,
+  "model_s": 0.0,
+  "from_cache": true,
+  "old_sections": 20,
+  "new_sections": 20,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 0,
+  "new_dup_ids": 0,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Qwen2.5-VL_Technical_Report.txt",
+  "chars": 91526,
+  "model_s": 0.0,
+  "from_cache": true,
+  "old_sections": 27,
+  "new_sections": 27,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 0,
+  "new_dup_ids": 0,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Qwen2.5_Technical_Report.txt",
+  "chars": 94912,
+  "model_s": 0.0,
+  "from_cache": true,
+  "old_sections": 24,
+  "new_sections": 24,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 0,
+  "new_dup_ids": 0,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "RAG_for_LLMs_A_Survey.txt",
+  "chars": 109531,
+  "model_s": 0.0,
+  "from_cache": true,
+  "old_sections": 36,
+  "new_sections": 36,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 18,
+  "new_dup_ids": 18,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Reasoning_with_LLMs_A_Survey.txt",
+  "chars": 145063,
+  "model_s": 0.0,
+  "from_cache": true,
+  "old_sections": 32,
+  "new_sections": 32,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 2,
+  "new_dup_ids": 2,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "Self_Evolution_of_LLMs_A_Survey.txt",
+  "chars": 95902,
+  "model_s": 0.0,
+  "from_cache": true,
+  "old_sections": 44,
+  "new_sections": 44,
+  "old_dropped": 0,
+  "new_dropped": 0,
+  "old_dup_ids": 0,
+  "new_dup_ids": 0,
+  "same": true,
+  "only_old": [],
+  "only_new": []
+ },
+ {
+  "file": "The_Prompt_Report_Systematic_Survey.txt",
+  "chars": 253337,
+  "model_s": 7.2,
+  "from_cache": true,
+  "old_sections": 140,
+  "new_sections": 140,
+  "old_dropped": 14,
+  "new_dropped": 14,
+  "old_dup_ids": 2,
+  "new_dup_ids": 2,
+  "same": false,
+  "only_old": [
+   [
+    "1",
+    2083
+   ],
+   [
+    "1.1",
+    2100
+   ]
+  ],
+  "only_new": [
+   [
+    "1",
+    5717
+   ],
+   [
+    "1.1",
+    10766
+   ]
+  ]
+ }
+]

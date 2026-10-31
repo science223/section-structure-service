@@ -1,0 +1,14 @@
+<vbox id="paperstructure-prefs">
+  <groupbox>
+    <label><html:h2>Paper Structure（本地章节结构）</html:h2></label>
+    <html:label for="paperstructure-server">本地服务地址</html:label>
+    <html:input type="text" id="paperstructure-server" preference="extensions.zotero.paperstructure.server"
+                style="width: 24em"/>
+    <hbox align="center">
+      <button id="paperstructure-test" label="测试连接"/>
+      <html:span id="paperstructure-status"></html:span>
+    </hbox>
+    <description>章节识别全部在本机运行，不联网。先在命令行启动服务：paper-structure app --no-browser</description>
+    <description>模型和设备在服务里设置：~/.paper_structure/config.json，或启动时加 --model / --device。</description>
+  </groupbox>
+</vbox>

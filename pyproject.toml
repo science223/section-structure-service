@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plain-text-section-tools"
+version = "0.1.0"
+description = "Recover and navigate section structure in academic-paper plain text."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = []
+
+[project.optional-dependencies]
+# accelerate: the CUDA path loads with device_map="auto", which transformers refuses without it (5.5 and 5.20 both).
+infer = [
+    "torch>=2.0",
+    "transformers>=4.40",
+    "accelerate>=0.26",
+]
+# lite: the lightweight Jev tagger (a folder with model.onnx) runs on onnxruntime + tokenizers, without torch.
+lite = [
+    "onnxruntime>=1.20",
+    "tokenizers>=0.19",
+    "numpy>=1.24",
+]
+mcp = [
+    "mcp>=1.0",
+]
+pdf = [
+    "pypdfium2>=4",
+]
+app = [
+    "torch>=2.0",
+    "transformers>=4.40",
+    "accelerate>=0.26",
+    "pypdfium2>=4",
+]
+
+[project.scripts]
+paper-structure = "paper_structure.cli:main"
+
+[tool.setuptools]
+packages = ["paper_structure"]
+
+[tool.setuptools.package-data]
+paper_structure = ["app_static/*"]

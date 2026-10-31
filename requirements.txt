@@ -1,0 +1,5 @@
+# Core local inference dependencies. No network installation was performed by TASK X.
+torch>=2.0
+transformers>=4.40
+
+# Optional MCP interface (install separately where needed): mcp>=1.0

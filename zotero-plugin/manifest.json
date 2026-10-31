@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Paper Structure",
+  "version": "0.1.0",
+  "description": "本地模型识别论文章节结构：右键提取目录（带页码链接），不联网；给智能体按章节读论文的工具。",
+  "author": "Gao Shoupeng",
+  "icons": {
+    "48": "content/icon.svg",
+    "96": "content/icon.svg"
+  },
+  "applications": {
+    "zotero": {
+      "id": "paper-structure@wku.edu.cn",
+      "update_url": "https://raw.githubusercontent.com/science223/plain-text-section-tools/main/zotero-plugin/updates.json",
+      "strict_min_version": "6.999",
+      "strict_max_version": "7.*"
+    }
+  }
+}

@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paper Structure</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #f4f5f7; --surface: #ffffff; --surface-2: #f8f9fb; --hover: #f1f3f6;
+  --border: #e2e5ea; --border-strong: #cdd2da;
+  --text: #1b1f27; --muted: #5f6778; --faint: #8b92a0;
+  --accent: #2f5bd3; --accent-hover: #2449b0; --on-accent: #ffffff;
+  --accent-weak: #ebf0fc; --accent-soft: #b9c9f3; --sel-bg: #f3f6fd;
+  --hd-bg: #e1e9fb; --hd-fg: #1d3b8f; --flash: rgba(47, 91, 211, .30);
+  --danger: #b42318; --danger-bg: #fef1ef; --danger-border: #f4c7c1;
+  --code-bg: #f4f6f9; --track: #eceff3; --bar-full: #a3abb8; --overlay: rgba(244, 245, 247, .85);
+  --shadow: 0 1px 2px rgba(16, 24, 40, .06), 0 6px 20px rgba(16, 24, 40, .07);
+  /* Segoe UI before anything generic: on a Chinese-locale Windows, system-ui resolves to Microsoft YaHei UI */
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "Cascadia Mono", Consolas, "Liberation Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1115; --surface: #171a20; --surface-2: #13161b; --hover: #1e222a;
+    --border: #2a2f38; --border-strong: #3a404b;
+    --text: #e5e7eb; --muted: #a0a7b4; --faint: #737b89;
+    --accent: #7f9cff; --accent-hover: #a2b7ff; --on-accent: #0d1530;
+    --accent-weak: #1d2640; --accent-soft: #3a4d82; --sel-bg: #182033;
+    --hd-bg: #26345e; --hd-fg: #cdd8ff; --flash: rgba(127, 156, 255, .40);
+    --danger: #ff9b8f; --danger-bg: #2a1614; --danger-border: #5a2b26;
+    --code-bg: #111318; --track: #252a33; --bar-full: #5b6372; --overlay: rgba(15, 17, 21, .82);
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 6px 20px rgba(0, 0, 0, .35);
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; height: 100%; }
+body { background: var(--bg); color: var(--text); font: 14px/1.45 var(--sans); display: flex; flex-direction: column; overflow: hidden; }
+h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: -0.01em; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.muted { color: var(--muted); } .small { font-size: 12px; }
+
+/* top bar */
+.topbar { flex: none; display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 8px 16px; background: var(--surface); border-bottom: 1px solid var(--border); }
+.brand { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 650; white-space: nowrap; }
+.logo { width: 18px; height: 18px; fill: var(--accent); flex: none; }
+.badge { font: 11.5px var(--mono); color: var(--muted); background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; padding: 2px 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 42vw; }
+.spacer { flex: 1; }
+.btn { display: inline-flex; align-items: center; gap: 6px; font: 500 13px/1.2 var(--sans); color: var(--text); background: var(--surface); border: 1px solid var(--border-strong); border-radius: 7px; padding: 7px 12px; cursor: pointer; text-decoration: none; white-space: nowrap; }
+.btn:hover:not(:disabled) { background: var(--hover); }
+.btn:disabled, select:disabled { opacity: .5; cursor: default; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn.primary:hover:not(:disabled) { background: var(--accent-hover); border-color: var(--accent-hover); }
+.btn.sm { padding: 4px 9px; font-size: 12px; border-radius: 6px; }
+select.btn { max-width: 260px; padding-right: 8px; }
+
+/* error banner */
+.banner { flex: none; display: flex; align-items: flex-start; gap: 10px; padding: 8px 16px; background: var(--danger-bg); color: var(--danger); border-bottom: 1px solid var(--danger-border); font-size: 13px; }
+.banner span { flex: 1; overflow-wrap: anywhere; }
+.x { border: 0; background: none; color: inherit; font-size: 18px; line-height: 1; cursor: pointer; padding: 0 4px; opacity: .75; } .x:hover { opacity: 1; }
+
+main { flex: 1; min-height: 0; display: flex; }
+.view { flex: 1; min-width: 0; min-height: 0; }
+.center { display: flex; align-items: center; justify-content: center; padding: 24px 16px; overflow: auto; }
+
+/* empty state */
+.dropzone { width: min(640px, 100%); text-align: center; padding: 52px 32px 40px; background: var(--surface); border: 2px dashed var(--border-strong); border-radius: 16px; cursor: pointer; transition: border-color .15s; }
+.dropzone:hover { border-color: var(--accent); }
+.dz-icon { width: 56px; height: 56px; margin: 0 auto; border-radius: 14px; background: var(--accent-weak); display: flex; align-items: center; justify-content: center; }
+.dz-icon .logo { width: 28px; height: 28px; }
+.dropzone h1 { font-size: 21px; margin: 18px 0 8px; }
+.dropzone p { color: var(--muted); margin: 0 auto 22px; max-width: 50ch; }
+.dropzone .fine { font-size: 12px; color: var(--faint); margin: 18px auto 0; }
+
+/* progress */
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); }
+.pcard { width: min(520px, 100%); padding: 22px 24px; }
+.pname { font-weight: 600; font-size: 15px; overflow-wrap: anywhere; }
+.pstatus { color: var(--muted); margin-top: 4px; font-variant-numeric: tabular-nums; }
+.bar { height: 6px; background: var(--track); border-radius: 3px; overflow: hidden; margin: 16px 0 4px; }
+.bar-fill { height: 100%; width: 0; background: var(--accent); border-radius: 3px; transition: width .4s; }
+.bar.indet .bar-fill { width: 35%; animation: indet 1.3s ease-in-out infinite; }
+@keyframes indet { from { transform: translateX(-100%); } to { transform: translateX(300%); } }
+.chip { display: inline-block; font-size: 12px; padding: 2px 9px; border-radius: 999px; background: var(--accent-weak); color: var(--accent); margin-top: 10px; }
+.error-box { margin-top: 14px; padding: 10px 12px; border: 1px solid var(--danger-border); background: var(--danger-bg); color: var(--danger); border-radius: 8px; font-size: 13px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.pactions { margin-top: 14px; }
+
+/* workspace */
+.workspace:not([hidden]) { display: grid; grid-template-columns: var(--left, clamp(220px, 24vw, 320px)) 7px minmax(0, 1fr) 7px var(--right, clamp(280px, 30vw, 400px)); grid-template-rows: minmax(0, 1fr); }
+.pane { display: flex; flex-direction: column; min-width: 0; min-height: 0; background: var(--surface); }
+.pane-head { flex: none; padding: 10px 14px; border-bottom: 1px solid var(--border); }
+.pane-title { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.pane-title h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.pane-title h2.doc { text-transform: none; letter-spacing: -0.01em; color: var(--text); font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.pane-sub { font-size: 12px; color: var(--faint); margin-top: 2px; }
+.pane-title .pane-sub { flex: none; margin: 0 0 0 auto; white-space: nowrap; }
+.pane-body { flex: 1; min-height: 0; overflow: auto; }
+.gutter { cursor: col-resize; background: linear-gradient(var(--border), var(--border)) center / 1px 100% no-repeat; touch-action: none; }
+.gutter:hover, .gutter.drag { background-image: linear-gradient(var(--accent), var(--accent)); background-size: 2px 100%; }
+.exports { display: flex; gap: 6px; padding-right: 6px; margin-right: 4px; border-right: 1px solid var(--border); }
+
+/* outline */
+.outline { padding: 6px 0; outline: none; }
+.outline:focus-visible { box-shadow: inset 0 0 0 2px var(--accent-soft); }
+.row { display: flex; align-items: baseline; gap: 8px; padding: 4px 12px 4px 10px; border-left: 2px solid transparent; cursor: pointer; font-size: 13px; }
+.row:hover { background: var(--hover); }
+.row.sel { background: var(--accent-weak); border-left-color: var(--accent); }
+.rid { flex: none; max-width: 38%; font: 11.5px var(--mono); color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rtitle { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row[aria-level="1"] .rtitle { font-weight: 550; }
+.rtag { flex: none; font-size: 11px; color: var(--faint); }
+.rtok { flex: none; font-size: 11px; color: var(--faint); font-variant-numeric: tabular-nums; }
+.pad { padding: 12px 14px; }
+.unloc { margin: 8px 12px 16px; border-top: 1px solid var(--border); padding-top: 8px; font-size: 12.5px; }
+.unloc summary { cursor: pointer; color: var(--muted); padding: 4px 0; } .unloc p { color: var(--faint); margin: 4px 0 8px; }
+.unloc ul { list-style: none; margin: 0; padding: 0; } .unloc li { padding: 5px 0; border-bottom: 1px dashed var(--border); color: var(--muted); }
+.utitle { font-family: var(--mono); font-size: 12px; overflow-wrap: anywhere; } .ureason { font-size: 11.5px; color: var(--faint); }
+
+/* text pane */
+.toolbar { margin-top: 8px; display: flex; flex-direction: column; gap: 8px; }
+.tb-row { display: flex; align-items: center; gap: 10px; min-width: 0; flex-wrap: wrap; }
+.sel-id { font: 12px var(--mono); padding: 1px 7px; border-radius: 5px; background: var(--accent-weak); color: var(--accent); flex: none; }
+.sel-title { flex: 1 1 160px; min-width: 0; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sel-title.muted { font-weight: 400; }
+.check { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); white-space: nowrap; cursor: pointer; }
+.search { flex-wrap: nowrap; }
+.search input { flex: 1; min-width: 0; font: 13px var(--sans); color: var(--text); background: var(--surface-2); border: 1px solid var(--border-strong); border-radius: 7px; padding: 7px 10px; }
+.search input:focus { outline: none; border-color: var(--accent); background: var(--surface); }
+.hits { margin-top: 8px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface-2); }
+.hits-head { display: flex; align-items: center; padding: 6px 10px; font-size: 12px; color: var(--muted); border-bottom: 1px solid var(--border); }
+.hits-head span { flex: 1; overflow-wrap: anywhere; }
+.hit-list { max-height: 168px; overflow: auto; }
+.hit { display: flex; gap: 8px; width: 100%; text-align: left; border: 0; border-bottom: 1px solid var(--border); background: none; color: var(--text); font: 12px/1.45 var(--mono); padding: 6px 10px; cursor: pointer; }
+.hit:last-child { border-bottom: 0; } .hit:hover { background: var(--hover); }
+.hit b { color: var(--accent); background: var(--accent-weak); font-weight: 700; border-radius: 2px; }
+.hit-sec { flex: none; color: var(--faint); } .hit-snip { overflow-wrap: anywhere; }
+.doc-text { font: 12.5px/1.65 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; tab-size: 4; padding: 14px 20px 50vh 0; }
+.blk { padding-left: 17px; border-left: 3px solid transparent; }
+.blk.pre { color: var(--muted); }
+.blk.sel { background: var(--sel-bg); border-left-color: var(--accent); }
+.hd { background: var(--hd-bg); color: var(--hd-fg); font-weight: 700; border-radius: 3px; padding: 1px 0; cursor: pointer; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+mark.flash { color: inherit; background: var(--flash); border-radius: 2px; outline: 2px solid var(--accent); animation: flash 2.2s ease-out forwards; }
+@keyframes flash { 0%, 65% { background: var(--flash); outline-color: var(--accent); } 100% { background: transparent; outline-color: transparent; } }
+
+/* agent view */
+.agent { background: var(--surface-2); padding: 12px; }
+.summary { padding: 14px; box-shadow: none; }
+.metric + .metric { margin-top: 12px; }
+.mrow { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 10px; font-size: 13px; }
+.mval { font-weight: 600; font-variant-numeric: tabular-nums; }
+.mval.dim { font-weight: 400; color: var(--faint); }
+.track { height: 8px; background: var(--track); border-radius: 4px; overflow: hidden; margin-top: 5px; }
+.fill { height: 100%; width: 0; border-radius: 4px; transition: width .3s; }
+.fill.full { width: 100%; background: var(--bar-full); } .fill.outl { background: var(--accent-soft); } .fill.sec { background: var(--accent); }
+.session { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); }
+.approx { margin-top: 8px; font-size: 11.5px; color: var(--faint); }
+.log-head { display: flex; align-items: center; gap: 8px; margin: 18px 2px 8px; }
+.log-head h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.count { font-size: 11px; color: var(--muted); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 0 7px; }
+.call { background: var(--surface); border: 1px solid var(--border); border-radius: 9px; padding: 10px 12px; margin-bottom: 10px; }
+.call:first-child { border-color: var(--accent-soft); }
+.call-head { display: flex; align-items: baseline; gap: 8px; font-size: 11.5px; color: var(--faint); }
+.call-tok { margin-left: auto; font-size: 12.5px; font-weight: 650; color: var(--text); font-variant-numeric: tabular-nums; }
+.sig { display: block; margin: 7px 0 6px; padding: 8px 10px; background: var(--code-bg); border: 1px solid var(--border); border-radius: 6px; font: 12px/1.5 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
+.sig .fn { color: var(--accent); font-weight: 650; } .sig .arg { color: var(--muted); }
+.call-res summary { font-size: 12px; color: var(--muted); cursor: pointer; }
+.call-res pre { margin: 6px 0 0; max-height: 280px; overflow: auto; padding: 8px 10px; background: var(--code-bg); border-radius: 6px; font: 11.5px/1.5 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
+.empty-log { font-size: 12.5px; color: var(--faint); padding: 4px 2px; }
+.note { font-size: 12px; color: var(--muted); margin: 14px 2px 4px; }
+
+/* drag overlay */
+.overlay { position: fixed; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center; background: var(--overlay); pointer-events: none; }
+.overlay-box { padding: 40px 56px; border: 2px dashed var(--accent); border-radius: 16px; background: var(--surface); box-shadow: var(--shadow); font-size: 18px; font-weight: 600; color: var(--accent); text-align: center; }
+
+@media (max-width: 900px) {
+  body { height: auto; min-height: 100%; overflow: auto; }
+  .badge { max-width: 60vw; }
+  .workspace:not([hidden]) { display: flex; flex-direction: column; }
+  .gutter { display: none; }
+  .pane { border-bottom: 1px solid var(--border); }
+  #outlineScroll { max-height: 45vh; }
+  #textScroll { max-height: 75vh; }
+  .topbar { flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><svg class="logo" viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="3" width="16" height="2.6" rx="1.3"/><rect x="5.5" y="8.7" width="12.5" height="2.6" rx="1.3"/><rect x="9" y="14.4" width="9" height="2.6" rx="1.3"/></svg>Paper Structure</div>
+  <span class="badge" id="badge" hidden></span>
+  <div class="spacer"></div>
+  <div class="exports" id="exports" hidden><a class="btn sm" id="expMd" title="Download the outline as Markdown">Outline (.md)</a><a class="btn sm" id="expJson" title="Download sections and unlocated predictions as JSON">Structure (.json)</a></div>
+  <select class="btn" id="recent" aria-label="Recent documents"><option value="">Recent</option></select>
+  <button class="btn primary" id="openBtn" type="button">Open file</button>
+  <input type="file" id="fileInput" accept=".pdf,.txt,.md" hidden>
+</header>
+<div class="banner" id="banner" role="alert" hidden><span id="bannerText"></span><button class="x" id="bannerClose" type="button" aria-label="Dismiss">&times;</button></div>
+
+<main>
+  <section class="view center" id="emptyView">
+    <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Open a file">
+      <div class="dz-icon"><svg class="logo" viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="3" width="16" height="2.6" rx="1.3"/><rect x="5.5" y="8.7" width="12.5" height="2.6" rx="1.3"/><rect x="9" y="14.4" width="9" height="2.6" rx="1.3"/></svg></div>
+      <h1>Drop a PDF, .txt or .md file here</h1>
+      <p>A local model detects the section headings, so you or an LLM agent can read and search one section at a time instead of the whole document.</p>
+      <button class="btn primary" id="dzOpen" type="button">Open file</button>
+      <p class="fine">Runs on this machine: the file is not sent anywhere else.</p>
+    </div>
+  </section>
+
+  <section class="view center" id="progressView" hidden>
+    <div class="card pcard">
+      <div class="pname" id="pName"></div>
+      <div class="pstatus" id="pStatus" aria-live="polite"></div>
+      <div class="bar" id="pBar"><div class="bar-fill" id="pFill"></div></div>
+      <span class="chip" id="pCached" hidden>Using cached result</span>
+      <div class="error-box" id="pError" hidden></div>
+      <div class="pactions" id="pActions" hidden><button class="btn" id="pRetry" type="button">Open another file</button></div>
+    </div>
+  </section>
+
+  <section class="view workspace" id="workspace" hidden>
+    <aside class="pane" id="paneOutline">
+      <div class="pane-head">
+        <div class="pane-title"><h2>Outline</h2></div>
+        <div class="pane-sub" id="olStats"></div>
+      </div>
+      <div class="pane-body" id="outlineScroll">
+        <div class="outline" id="outline" role="tree" tabindex="0" aria-label="Sections"></div>
+        <details class="unloc" id="unloc">
+          <summary>Unlocated predictions (<span id="unlocCount">0</span>)</summary>
+          <p>Headings the model predicted that the locator could not place in the text. They are listed, not dropped.</p>
+          <ul id="unlocList"></ul>
+        </details>
+      </div>
+    </aside>
+    <div class="gutter" id="g1" role="separator" aria-orientation="vertical" aria-label="Resize the outline pane"></div>
+    <section class="pane" id="paneText">
+      <div class="pane-head">
+        <div class="pane-title"><h2 class="doc" id="docName"></h2><span class="pane-sub" id="docMeta"></span></div>
+        <div class="toolbar">
+          <div class="tb-row">
+            <span class="sel-id" id="selId" hidden></span>
+            <span class="sel-title muted" id="selTitle">Select a section in the outline</span>
+            <label class="check"><input type="checkbox" id="descBox" disabled> Include subsections</label>
+            <button class="btn sm" id="copyBtn" type="button" disabled>Copy section</button>
+          </div>
+          <form class="tb-row search" id="searchForm" autocomplete="off">
+            <input type="search" id="searchInput" placeholder="Search in this section" aria-label="Search in this section" disabled>
+            <button class="btn sm" id="searchBtn" type="submit" disabled>Search</button>
+          </form>
+        </div>
+        <div class="hits" id="hits" hidden>
+          <div class="hits-head"><span id="hitHead"></span><button class="x" id="hitsClose" type="button" aria-label="Close results">&times;</button></div>
+          <div class="hit-list" id="hitList"></div>
+        </div>
+      </div>
+      <div class="pane-body" id="textScroll"><div class="doc-text" id="text"></div></div>
+    </section>
+    <div class="gutter" id="g2" role="separator" aria-orientation="vertical" aria-label="Resize the agent pane"></div>
+    <aside class="pane" id="paneAgent">
+      <div class="pane-head">
+        <div class="pane-title"><h2>Agent view</h2></div>
+        <div class="pane-sub">The calls an LLM agent would make, and what each result costs</div>
+      </div>
+      <div class="pane-body agent">
+        <div class="card summary">
+          <div class="metric">
+            <div class="mrow"><span>Whole document</span><span class="mval" id="sumFull"></span></div>
+            <div class="track"><div class="fill full"></div></div>
+          </div>
+          <div class="metric">
+            <div class="mrow"><span>Outline (get_outline)</span><span class="mval" id="sumOutline"></span></div>
+            <div class="track"><div class="fill outl" id="barOutline"></div></div>
+          </div>
+          <div class="metric">
+            <div class="mrow"><span id="sumSecLabel">This section</span><span class="mval" id="sumSec"></span></div>
+            <div class="track"><div class="fill sec" id="barSec"></div></div>
+          </div>
+          <div class="session" id="sumSession"></div>
+          <div class="approx" id="sumApprox" hidden>&asymp; Token counts are estimates (characters / 4): the server found no tokenizer.</div>
+        </div>
+        <div class="log-head"><h3>Tool calls</h3><span class="count" id="logCount">0</span></div>
+        <div id="log"></div>
+        <p class="note">These are the same three tools the package exposes over MCP to an LLM agent.</p>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<div class="overlay" id="overlay" hidden><div class="overlay-box" id="overlayText">Drop to open</div></div>
+
+<script>
+(function () {
+'use strict';
+const $ = id => document.getElementById(id);
+const enc = encodeURIComponent;
+const reduceMotion = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+const S = {
+  approx: false, running: false, jobId: null, gen: 0, pollTimer: 0, pollFails: 0, job: null,
+  text: '', cp: null, secs: [], sel: -1, desc: false, painted: null,
+  segs: [], secEls: [], headEls: [], rowEls: [], flash: null, readTimer: 0,
+  perJob: new Map()   // job_id -> {entries, reads, readRes, text, full, outline, inspected}
+};
+const LABEL = { queued: 'Waiting in the queue', reading: 'Reading the file', 'loading model': 'Loading the model',
+  detecting: 'Detecting section headings', done: 'Done', error: 'Failed' };
+const REASON = { no_text_match: 'not found in the text', dropped_for_monotonic_consistency: 'found only out of document order' };
+
+// ---------- small helpers (all document text goes in through textContent / text nodes, never innerHTML)
+function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+const num = n => Number(n || 0).toLocaleString('en-US');
+const tok = n => (S.approx ? '\u2248' : '') + num(n) + ' tokens';
+const oneLine = s => String(s || '').replace(/\s+/g, ' ').trim();
+const store = () => S.perJob.get(S.jobId);
+const readKey = (id, desc) => id + '\u0000' + (desc ? 1 : 0);
+function pct(y, x) {
+  if (!x || y == null) return '\u2013';
+  const v = y / x * 100;
+  if (y > 0 && v < 0.1) return '<0.1%';
+  return (v < 10 ? v.toFixed(1) : String(Math.round(v))) + '%';
+}
+function showError(msg) { $('bannerText').textContent = msg; $('banner').hidden = false; }
+
+async function api(path, opts) {
+  let res, data = null;
+  try { res = await fetch(path, opts); } catch (e) { throw new Error('the local server did not respond (' + e.message + ')'); }
+  try { data = await res.json(); } catch (e) { /* not JSON */ }
+  if (!res.ok || !data || typeof data !== 'object') {
+    const err = new Error(data && data.error ? data.error : res.ok ? 'unexpected response from ' + path : 'HTTP ' + res.status + ' ' + res.statusText);
+    err.status = res.status;
+    throw err;
+  }
+  return data;
+}
+
+// Offsets from the backend are Python str indices (code points); JavaScript strings index UTF-16 code units. They agree
+// while the text is all BMP, which is the normal case. An astral character (e.g. the U+1D44E math-italic letters that
+// some PDF math fonts extract to) would shift every later offset by one, so when the text has any we map once.
+function buildOffsets(t) {
+  S.cp = null;
+  if (!/[\uD800-\uDBFF][\uDC00-\uDFFF]/.test(t)) return;
+  const m = new Int32Array(t.length + 1);
+  let cp = 0;
+  for (let i = 0; i < t.length; i++) {
+    m[cp++] = i;
+    const c = t.charCodeAt(i);
+    if (c >= 0xD800 && c <= 0xDBFF) { const d = t.charCodeAt(i + 1); if (d >= 0xDC00 && d <= 0xDFFF) i++; }
+  }
+  m[cp] = t.length;
+  S.cp = m.subarray(0, cp + 1);
+}
+function off(p) {
+  p = Math.max(0, Number(p) || 0);
+  return S.cp ? S.cp[Math.min(p, S.cp.length - 1)] : Math.min(p, S.text.length);
+}
+
+// ---------- top bar
+async function loadInfo() {
+  try {
+    const i = await api('/api/info');
+    S.approx = i.tokens === 'approx';
+    const model = i.model ? String(i.model).split(/[\\/]+/).filter(Boolean).pop() : 'not set';
+    const b = $('badge');
+    b.textContent = 'model: ' + model + ' \u00b7 ' + (i.device || 'unknown device');
+    b.title = 'paper_structure ' + (i.version || '') + '\nmodel: ' + (i.model || 'not set') + '\ntoken counts: ' + (i.tokens || 'unknown');
+    b.hidden = false;
+    $('sumApprox').hidden = !S.approx;
+  } catch (e) { showError('Could not read the server info: ' + e.message); }
+}
+async function refreshJobs() {
+  let r;
+  try { r = await api('/api/jobs'); } catch (e) { return; } // server trouble is reported by the call that needed it
+  const sel = $('recent');
+  sel.textContent = '';
+  const head = el('option', null, r.jobs && r.jobs.length ? 'Recent (' + r.jobs.length + ')' : 'Recent');
+  head.value = ''; head.disabled = true; sel.append(head);
+  for (const j of r.jobs || []) {
+    const o = el('option', null, (j.job_id === S.jobId ? '\u2022 ' : '') + j.name + ' \u00b7 ' + j.status + (j.cached ? ' (cached)' : ''));
+    o.value = j.job_id; sel.append(o);
+  }
+  sel.selectedIndex = 0;
+}
+function setRunning(b) { S.running = b; for (const id of ['openBtn', 'recent', 'dzOpen', 'pRetry']) $(id).disabled = b; }
+function showView(name) {
+  $('emptyView').hidden = name !== 'empty';
+  $('progressView').hidden = name !== 'progress';
+  $('workspace').hidden = name !== 'workspace';
+  $('exports').hidden = name !== 'workspace';
+}
+
+// ---------- opening files and following a job
+async function upload(file) {
+  if (S.running) { showError('Wait until the current document has finished.'); return; }
+  if (!/\.(pdf|txt|md)$/i.test(file.name)) { showError(file.name + ': only .pdf, .txt and .md files can be opened.'); return; }
+  if (!file.size) { showError(file.name + ' is empty.'); return; }
+  setRunning(true);
+  try {
+    const r = await api('/api/open', { method: 'POST', headers: { 'X-Filename': enc(file.name) }, body: file });
+    showJob(r.job_id, r.name);
+  } catch (e) { setRunning(false); showError('Could not open ' + file.name + ': ' + e.message); }
+}
+function showJob(id, name) {
+  S.gen++; clearTimeout(S.pollTimer); clearTimeout(S.readTimer);
+  S.jobId = id; S.job = null; S.pollFails = 0;
+  try { history.replaceState(null, '', '#job=' + enc(id)); } catch (e) { /* not essential */ }
+  if (!S.perJob.has(id)) S.perJob.set(id, { entries: [], reads: new Map(), readRes: new Map(), text: null, full: 0, outline: null, inspected: false });
+  setRunning(true);
+  setProgress({ name: name || id, status: 'queued', done: 0, total: 0 });
+  showView('progress');
+  refreshJobs();
+  poll(S.gen);
+}
+async function poll(gen) {
+  let j;
+  try { j = await api('/api/jobs/' + enc(S.jobId)); } catch (e) {
+    if (gen !== S.gen) return;
+    if (e.status === 404) {
+      setRunning(false); showView('empty'); refreshJobs();
+      try { history.replaceState(null, '', location.pathname); } catch (x) { /* ignore */ }
+      showError('That document is no longer on the server (jobs are kept only until the server restarts): ' + e.message);
+      return;
+    }
+    if (++S.pollFails >= 5) { setRunning(false); setProgress({ name: $('pName').textContent, status: 'error', error: 'Lost contact with the local server: ' + e.message }); return; }
+    S.pollTimer = setTimeout(() => poll(gen), 1500);
+    return;
+  }
+  if (gen !== S.gen) return;
+  S.pollFails = 0;
+  setProgress(j);
+  if (j.status === 'done') { finish(j, gen); return; }
+  if (j.status === 'error') { setRunning(false); refreshJobs(); return; }
+  S.pollTimer = setTimeout(() => poll(gen), 700);
+}
+function setProgress(j) {
+  const det = j.total > 0, err = j.status === 'error';
+  $('pName').textContent = j.name || '';
+  let status = LABEL[j.status] || String(j.status);
+  if (det && !err) status += ' \u00b7 ' + num(j.done) + ' / ' + num(j.total) + ' chunks';
+  $('pStatus').textContent = status;
+  $('pBar').hidden = err;
+  $('pBar').classList.toggle('indet', !det);
+  $('pFill').style.width = det ? Math.min(100, 100 * j.done / j.total).toFixed(1) + '%' : '';
+  $('pCached').hidden = !j.cached || err;
+  $('pError').hidden = !err;
+  $('pError').textContent = err ? (j.error || 'The job failed without a message.') : '';
+  $('pActions').hidden = !err;
+}
+async function finish(j, gen) {
+  const st = S.perJob.get(j.job_id);
+  if (st.text == null) {
+    let r;
+    try { r = await api('/api/jobs/' + enc(j.job_id) + '/text'); } catch (e) {
+      if (gen === S.gen) { setRunning(false); setProgress({ name: j.name, status: 'error', error: 'Could not load the document text: ' + e.message }); }
+      return;
+    }
+    st.text = String(r.text || '');
+  }
+  await loadInfo();   // the token mode can change once the model (and its tokenizer) has been loaded
+  if (gen !== S.gen) return;
+  S.job = j;
+  st.full = (j.stats && j.stats.tokens_full) || 0;
+  st.outline = j.tool_call ? j.tool_call.result_tokens : null;
+  setupDocument(j, st.text);
+  setRunning(false);
+  showView('workspace');
+  renderLog();
+  if (!st.inspected && j.tool_call) {
+    st.inspected = true;
+    addEntry(j.job_id, { call: j.tool_call, tokens: j.tool_call.result_tokens, kind: 'json', data: j.tool_call.result });
+  }
+  updateSummary();
+  refreshJobs();
+}
+
+// ---------- building the three panes (once per job)
+function setupDocument(j, text) {
+  if (S.flash) clearTimeout(S.flash.timer);
+  S.flash = null; S.text = text; buildOffsets(text);
+  const secs = (j.sections || []).map(s => ({ id: String(s.id), title: String(s.title || ''), depth: Math.max(1, s.depth | 0),
+    start: off(s.char_start), tokens: s.tokens | 0, empty: !!s.has_empty_body }));
+  // a section runs to the next section's start; char_end from the server is the same offset
+  secs.forEach((s, i) => { s.end = i + 1 < secs.length ? secs[i + 1].start : text.length; });
+  S.secs = secs; S.sel = -1; S.painted = null;
+  $('docName').textContent = j.name;
+  $('docMeta').textContent = num(text.length) + ' characters';
+  const st = j.stats || {};
+  $('olStats').textContent = [num(secs.length) + (secs.length === 1 ? ' section' : ' sections'),
+    st.headings_predicted != null ? num(st.headings_predicted) + ' predicted' : null,
+    st.chunks ? num(st.chunks) + ' chunks' : null,
+    j.cached ? 'cached result' : j.seconds != null ? j.seconds + ' s' : null].filter(Boolean).join(' \u00b7 ');
+  $('expMd').href = '/api/jobs/' + enc(j.job_id) + '/export?format=md';
+  $('expJson').href = '/api/jobs/' + enc(j.job_id) + '/export?format=json';
+  renderOutline(); renderUnlocated(j.unlocated || []); renderText(); updateToolbar(); clearHits();
+}
+function renderOutline() {
+  const box = $('outline'), frag = document.createDocumentFragment();
+  box.textContent = ''; S.rowEls = [];
+  if (!S.secs.length) { box.append(el('div', 'pad muted', 'No headings were located in this document.')); return; }
+  S.secs.forEach((s, i) => {
+    const r = el('div', 'row');
+    r.dataset.idx = i;
+    r.setAttribute('role', 'treeitem'); r.setAttribute('aria-level', s.depth); r.setAttribute('aria-selected', 'false');
+    r.style.paddingLeft = (10 + Math.min(s.depth - 1, 6) * 16) + 'px';
+    // the id is shown only when the title does not already say it ("3.1" before "3.1 Encoder", "abstract" before
+    // "Abstract"); a "#2" suffix that tells duplicates apart is always shown
+    const base = s.id.split('#')[0], dup = s.id.includes('#') ? '#' + s.id.split('#')[1] : '';
+    const slug = oneLine(s.title).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    const said = oneLine(s.title).startsWith(base) || slug.startsWith(base);
+    if (!said || dup) r.append(el('span', 'rid', said ? dup : s.id));
+    r.append(el('span', 'rtitle', oneLine(s.title)));
+    if (s.empty) r.append(el('span', 'rtag', '[empty]'));
+    r.append(el('span', 'rtok', (S.approx ? '\u2248' : '') + num(s.tokens)));
+    r.title = s.id + '  ' + oneLine(s.title) + '\n' + tok(s.tokens) + (s.empty ? '\nEmpty direct body: try "Include subsections"' : '');
+    S.rowEls.push(r); frag.append(r);
+  });
+  box.append(frag);
+}
+function renderUnlocated(list) {
+  const ul = $('unlocList');
+  $('unlocCount').textContent = list.length;
+  ul.textContent = '';
+  if (!list.length) ul.append(el('li', null, 'None: every predicted heading was located in the text.'));
+  for (const u of list) {
+    const li = el('li');
+    li.append(el('div', 'utitle', oneLine(u.predicted_title)), el('div', 'ureason', (REASON[u.reason] || 'not located') + ' \u00b7 ' + u.reason));
+    ul.append(li);
+  }
+}
+// The text is rendered once per job: one block per section (heading span + body text node), so selecting a section
+// only toggles classes, and a char offset is found by binary search over S.segs ({a, b, n}: text node n covers [a, b)).
+// A heading that starts mid-line is shown on its own line, since each section is a block; the characters are unchanged.
+function renderText() {
+  const box = $('text'), t = S.text, frag = document.createDocumentFragment();
+  S.segs = []; S.secEls = []; S.headEls = [];
+  const add = (parent, a, b) => { if (b > a) { const n = document.createTextNode(t.slice(a, b)); parent.append(n); S.segs.push({ a, b, n }); } };
+  const first = S.secs.length ? S.secs[0].start : t.length;
+  if (first > 0) { const pre = el('div', 'blk pre'); pre.title = 'Text before the first located heading (not part of any section)'; add(pre, 0, first); frag.append(pre); }
+  S.secs.forEach((s, i) => {
+    const d = el('div', 'blk sec'), h = el('span', 'hd');
+    d.dataset.idx = i; h.dataset.idx = i;
+    const he = Math.min(s.start + s.title.length, s.end);   // the heading is text.slice(char_start, char_start + title.length)
+    add(h, s.start, he); d.append(h); add(d, he, s.end);
+    frag.append(d); S.secEls.push(d); S.headEls.push(h);
+  });
+  box.textContent = ''; box.append(frag);
+  $('textScroll').scrollTop = 0;
+}
+
+// ---------- selection
+function endIdx(i) {   // exclusive index of the last section shown for i (with subsections: up to the next same-or-shallower)
+  if (!S.desc) return i + 1;
+  let k = i + 1;
+  while (k < S.secs.length && S.secs[k].depth > S.secs[i].depth) k++;
+  return k;
+}
+function secAt(p) { let lo = 0, hi = S.secs.length - 1, r = -1; while (lo <= hi) { const m = (lo + hi) >> 1; if (S.secs[m].start <= p) { r = m; lo = m + 1; } else hi = m - 1; } return r; }
+function scrollWithin(box, target, where) {
+  const br = box.getBoundingClientRect(), tr = target.getBoundingClientRect();
+  let top;
+  if (where === 'nearest') {
+    if (tr.top >= br.top && tr.bottom <= br.bottom) return;
+    top = box.scrollTop + (tr.top < br.top ? tr.top - br.top - 8 : tr.bottom - br.bottom + 8);
+  } else if (where === 'center') top = box.scrollTop + tr.top - br.top - (box.clientHeight - tr.height) / 2;
+  else top = box.scrollTop + tr.top - br.top - 14;
+  const far = Math.abs(top - box.scrollTop) > 6000;
+  box.scrollTo({ top: Math.max(0, top), behavior: reduceMotion || far || where === 'nearest' ? 'auto' : 'smooth' });
+}
+function selectSection(i, scroll) {
+  if (i < 0 || i >= S.secs.length) return;
+  if (S.sel >= 0 && S.rowEls[S.sel]) { S.rowEls[S.sel].classList.remove('sel'); S.rowEls[S.sel].setAttribute('aria-selected', 'false'); }
+  S.sel = i;
+  const row = S.rowEls[i];
+  row.classList.add('sel'); row.setAttribute('aria-selected', 'true');
+  scrollWithin($('outlineScroll'), row, 'nearest');
+  paint();
+  if (scroll !== false) scrollWithin($('textScroll'), S.headEls[i], 'start');
+  updateToolbar(); clearHits(); updateSummary(); scheduleRead();
+}
+function paint() {
+  if (S.painted) for (let k = S.painted[0]; k < S.painted[1]; k++) S.secEls[k].classList.remove('sel');
+  S.painted = null;
+  if (S.sel < 0) return;
+  const b = endIdx(S.sel);
+  for (let k = S.sel; k < b; k++) S.secEls[k].classList.add('sel');
+  S.painted = [S.sel, b];
+}
+function updateToolbar() {
+  const has = S.sel >= 0, s = has ? S.secs[S.sel] : null;
+  $('selTitle').textContent = has ? oneLine(s.title) : 'Select a section in the outline';
+  $('selTitle').classList.toggle('muted', !has);
+  $('selId').textContent = has ? s.id : '';
+  $('selId').hidden = !has;
+  for (const id of ['descBox', 'copyBtn', 'searchInput', 'searchBtn']) $(id).disabled = !has;
+}
+
+// ---------- read_section / search_in_section (each call is logged once; repeated reads use the cached response)
+function getRead(i, desc) {
+  const jobId = S.jobId, st = S.perJob.get(jobId), s = S.secs[i], key = readKey(s.id, desc);
+  if (!st.reads.has(key)) {
+    const p = api('/api/jobs/' + enc(jobId) + '/read?section=' + enc(s.id) + '&descendants=' + (desc ? 1 : 0)).then(r => {
+      st.readRes.set(key, r);
+      const call = r.tool_call || { name: 'read_section', arguments: { file_path: S.job ? S.job.name : '', section_id: s.id, include_subsections: desc } };
+      addEntry(jobId, { call, tokens: r.tokens, kind: 'text', data: r.text });
+      return r;
+    });
+    p.catch(() => st.reads.delete(key));
+    st.reads.set(key, p);
+  }
+  return st.reads.get(key);
+}
+function scheduleRead() { clearTimeout(S.readTimer); S.readTimer = setTimeout(readCurrent, 200); }
+async function readCurrent() {
+  if (S.sel < 0) return;
+  const i = S.sel, desc = S.desc, gen = S.gen;
+  try { await getRead(i, desc); } catch (e) { if (gen === S.gen) showError('read_section failed: ' + e.message); return; }
+  if (gen === S.gen && S.sel === i && S.desc === desc) updateSummary();
+}
+async function copySection() {
+  if (S.sel < 0) return;
+  const btn = $('copyBtn');
+  try {
+    const r = await getRead(S.sel, S.desc);
+    await copyText(r.text);
+    btn.textContent = 'Copied';
+  } catch (e) { showError('Copy failed: ' + e.message); return; }
+  clearTimeout(btn._t);
+  btn._t = setTimeout(() => { btn.textContent = 'Copy section'; }, 1200);
+}
+async function copyText(t) {
+  if (navigator.clipboard && window.isSecureContext) { try { await navigator.clipboard.writeText(t); return; } catch (e) { /* fall back */ } }
+  const ta = el('textarea');
+  ta.value = t; ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.append(ta); ta.select();
+  const ok = document.execCommand('copy');
+  ta.remove();
+  if (!ok) throw new Error('the browser did not allow clipboard access');
+}
+async function runSearch() {
+  const q = $('searchInput').value;
+  if (S.sel < 0 || !q.trim()) return;
+  const jobId = S.jobId, i = S.sel, desc = S.desc, s = S.secs[i], btn = $('searchBtn');
+  btn.disabled = true;
+  try {
+    const r = await api('/api/jobs/' + enc(jobId) + '/search?section=' + enc(s.id) + '&q=' + enc(q) + '&descendants=' + (desc ? 1 : 0));
+    const call = r.tool_call || { name: 'search_document', arguments: { file_path: S.job ? S.job.name : '', query: q, section_id: s.id, include_subsections: desc } };
+    addEntry(jobId, { call, tokens: r.tokens, kind: 'json', data: r.hits });
+    if (jobId === S.jobId && i === S.sel && desc === S.desc) showHits(r.hits || [], q, s, desc);
+  } catch (e) { showError('search_document failed: ' + e.message); }
+  finally { btn.disabled = S.sel < 0; }
+}
+function clearHits() { $('hits').hidden = true; $('hitList').textContent = ''; }
+function appendBold(parent, s, re) {
+  let last = 0, m;
+  re.lastIndex = 0;
+  while ((m = re.exec(s))) {
+    if (m.index > last) parent.append(s.slice(last, m.index));
+    parent.append(el('b', null, m[0]));
+    last = m.index + m[0].length;
+    if (!m[0].length) re.lastIndex++;
+  }
+  if (last < s.length) parent.append(s.slice(last));
+}
+function showHits(hits, q, s, desc) {
+  const list = $('hitList'), n = hits.length;
+  list.textContent = '';
+  $('hitHead').textContent = (n ? num(n) + (n === 1 ? ' match' : ' matches') : 'No matches') + ' for \u201c' + q + '\u201d in ' + s.id + (desc ? ' and its subsections' : '');
+  const re = new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');   // literal, case-insensitive, like the backend
+  for (const h of hits.slice(0, 200)) {
+    const b = el('button', 'hit'), a = off(h.char_start), e = off(h.char_end);
+    b.type = 'button';
+    if (desc) { const k = secAt(a); if (k >= 0) b.append(el('span', 'hit-sec', S.secs[k].id)); }
+    const snip = el('span', 'hit-snip');
+    appendBold(snip, String(h.snippet || '').replace(/[\n\t]/g, ' '), re);   // same length, so nothing shifts
+    b.append(snip);
+    b.addEventListener('click', () => flashRange(a, e));
+    list.append(b);
+  }
+  if (n > 200) list.append(el('div', 'pad small muted', 'Showing the first 200 of ' + num(n) + ' matches.'));
+  $('hits').hidden = false;
+}
+// Flash [a, b): split the covering text nodes into before / <mark> / after, and put the original nodes back afterwards,
+// so S.segs stays valid.
+function flashRange(a, b) {
+  clearFlash();
+  let lo = 0, hi = S.segs.length - 1, i = S.segs.length;
+  while (lo <= hi) { const m = (lo + hi) >> 1; if (S.segs[m].b > a) { i = m; hi = m - 1; } else lo = m + 1; }
+  const restore = [];
+  let first = null;
+  for (; i < S.segs.length && S.segs[i].a < b; i++) {
+    const g = S.segs[i], t = g.n.data, from = Math.max(a, g.a) - g.a, to = Math.min(b, g.b) - g.a;
+    if (to <= from || !g.n.parentNode) continue;
+    const mark = el('mark', 'flash', t.slice(from, to)), parts = [];
+    if (from > 0) parts.push(document.createTextNode(t.slice(0, from)));
+    parts.push(mark);
+    if (to < t.length) parts.push(document.createTextNode(t.slice(to)));
+    g.n.replaceWith(...parts);
+    restore.push({ n: g.n, parts });
+    first = first || mark;
+  }
+  if (first) scrollWithin($('textScroll'), first, 'center');
+  S.flash = { restore, timer: setTimeout(clearFlash, 2400) };
+}
+function clearFlash() {
+  if (!S.flash) return;
+  clearTimeout(S.flash.timer);
+  for (const r of S.flash.restore) { if (r.parts[0].parentNode) { r.parts[0].before(r.n); r.parts.forEach(p => p.remove()); } }
+  S.flash = null;
+}
+
+// ---------- agent view
+function sigEl(call) {
+  const code = el('code', 'sig'), args = (call && call.arguments) || {};
+  code.append(el('span', 'fn', (call && call.name) || 'tool'), '(');
+  Object.keys(args).forEach((k, i) => {
+    if (i) code.append(', ');
+    code.append(el('span', 'arg', k + '='), JSON.stringify(args[k]));
+  });
+  code.append(')');
+  return code;
+}
+function previewText(e) {
+  if (e.kind === 'text') {
+    const t = String(e.data || '');
+    if (!t) return '(empty string)';
+    return t.length > 600 ? t.slice(0, 600) + '\n\u2026 (' + num(t.length - 600) + ' more characters)' : t;
+  }
+  const j = JSON.stringify(e.data, null, 1) || 'null';
+  return j.length > 12000 ? j.slice(0, 12000) + '\n\u2026 (' + num(j.length - 12000) + ' more characters)' : j;
+}
+function entryEl(e, full) {
+  const box = el('div', 'call'), head = el('div', 'call-head');
+  head.append(el('span', null, '#' + e.n), el('span', null, e.time.toLocaleTimeString('en-GB')),
+    el('span', 'call-tok', tok(e.tokens)), el('span', null, pct(e.tokens, full) + ' of document'));
+  const det = el('details', 'call-res'), pre = el('pre');
+  det.append(el('summary', null, e.kind === 'text' ? 'Result preview (text)' : 'Result (JSON)'), pre);
+  det.addEventListener('toggle', () => { if (det.open && !pre.firstChild) pre.textContent = previewText(e); });
+  box.append(head, sigEl(e.call), det);
+  return box;
+}
+function addEntry(jobId, e) {
+  const st = S.perJob.get(jobId);
+  if (!st) return;
+  e.n = st.entries.length + 1; e.time = new Date(); e.tokens = e.tokens | 0;
+  e.el = entryEl(e, st.full);
+  st.entries.push(e);
+  if (jobId === S.jobId) {
+    const log = $('log');
+    if (log.firstChild && log.firstChild.classList.contains('empty-log')) log.textContent = '';
+    log.prepend(e.el);
+    $('logCount').textContent = st.entries.length;
+    updateSummary();
+  }
+}
+function renderLog() {
+  const st = store(), log = $('log');
+  log.textContent = '';
+  if (!st.entries.length) log.append(el('div', 'empty-log', 'No tool calls yet.'));
+  for (let k = st.entries.length - 1; k >= 0; k--) log.append(st.entries[k].el);
+  $('logCount').textContent = st.entries.length;
+}
+function setBar(id, y, full) {
+  const v = y == null || !full ? 0 : Math.min(100, y / full * 100);
+  $(id).style.width = (y > 0 ? Math.max(v, 0.8) : v) + '%';
+}
+function updateSummary() {
+  const st = store();
+  if (!st || !S.job) return;
+  const full = st.full;
+  $('sumFull').textContent = tok(full);
+  $('sumOutline').textContent = st.outline == null ? '\u2013' : tok(st.outline) + ' (' + pct(st.outline, full) + ')';
+  setBar('barOutline', st.outline, full);
+  let y = null;
+  if (S.sel >= 0) {
+    const s = S.secs[S.sel], r = st.readRes.get(readKey(s.id, S.desc));
+    y = r ? r.tokens : S.desc ? null : s.tokens;
+    $('sumSecLabel').textContent = 'This section: ' + s.id + (S.desc ? ' + subsections' : '');
+    $('sumSec').textContent = y == null ? 'reading\u2026' : tok(y) + ' (' + pct(y, full) + ' of the document)';
+  } else {
+    $('sumSecLabel').textContent = 'This section';
+    $('sumSec').textContent = 'select one in the outline';
+  }
+  $('sumSec').classList.toggle('dim', y == null);
+  setBar('barSec', y, full);
+  const n = st.entries.length, total = st.entries.reduce((t, e) => t + e.tokens, 0);
+  $('sumSession').textContent = n ? 'Tool results this session: ' + tok(total) + ' in ' + n + (n === 1 ? ' call' : ' calls') +
+    ' (' + pct(total, full) + ' of reading the whole document once).' : '';
+}
+
+// ---------- events
+$('openBtn').addEventListener('click', () => $('fileInput').click());
+$('dzOpen').addEventListener('click', e => { e.stopPropagation(); $('fileInput').click(); });
+$('pRetry').addEventListener('click', () => $('fileInput').click());
+$('dropzone').addEventListener('click', () => { if (!S.running) $('fileInput').click(); });
+$('dropzone').addEventListener('keydown', e => { if ((e.key === 'Enter' || e.key === ' ') && e.target === $('dropzone')) { e.preventDefault(); $('fileInput').click(); } });
+$('fileInput').addEventListener('change', e => { const f = e.target.files[0]; e.target.value = ''; if (f) upload(f); });
+$('recent').addEventListener('change', e => { const v = e.target.value; e.target.selectedIndex = 0; if (v) showJob(v); });
+$('recent').addEventListener('pointerenter', refreshJobs);
+$('bannerClose').addEventListener('click', () => { $('banner').hidden = true; });
+$('hitsClose').addEventListener('click', clearHits);
+$('copyBtn').addEventListener('click', copySection);
+$('searchForm').addEventListener('submit', e => { e.preventDefault(); runSearch(); });
+$('descBox').addEventListener('change', e => {
+  S.desc = e.target.checked;
+  if (S.sel >= 0) { paint(); clearHits(); updateSummary(); scheduleRead(); }
+});
+$('outline').addEventListener('click', e => { const r = e.target.closest('.row'); if (r) { $('outline').focus({ preventScroll: true }); selectSection(+r.dataset.idx); } });
+$('outline').addEventListener('keydown', e => {
+  const n = S.secs.length;
+  if (!n) return;
+  let i = S.sel;
+  if (e.key === 'ArrowDown') i = Math.min(n - 1, i + 1);
+  else if (e.key === 'ArrowUp') i = Math.max(0, i - 1);
+  else if (e.key === 'Home') i = 0;
+  else if (e.key === 'End') i = n - 1;
+  else return;
+  e.preventDefault();
+  if (i !== S.sel) selectSection(i);
+});
+$('text').addEventListener('click', e => {   // clicking a highlighted heading selects its section (not while selecting text)
+  const h = e.target.closest('.hd'), sel = window.getSelection();
+  if (h && (!sel || sel.isCollapsed)) selectSection(+h.dataset.idx, false);
+});
+function gutter(id, prop, pane, sign) {
+  const g = $(id), ws = $('workspace');
+  g.addEventListener('pointerdown', e => {
+    e.preventDefault(); g.setPointerCapture(e.pointerId); g.classList.add('drag');
+    const x0 = e.clientX, w0 = $(pane).getBoundingClientRect().width;
+    const move = ev => ws.style.setProperty(prop, Math.round(Math.max(200, Math.min(window.innerWidth * 0.45, w0 + sign * (ev.clientX - x0)))) + 'px');
+    const up = () => { g.classList.remove('drag'); g.removeEventListener('pointermove', move); g.removeEventListener('pointerup', up); g.removeEventListener('pointercancel', up); };
+    g.addEventListener('pointermove', move); g.addEventListener('pointerup', up); g.addEventListener('pointercancel', up);
+  });
+}
+gutter('g1', '--left', 'paneOutline', 1);
+gutter('g2', '--right', 'paneAgent', -1);
+
+// the whole window is a drop target
+let dragDepth = 0;
+const hasFiles = e => !!(e.dataTransfer && Array.prototype.indexOf.call(e.dataTransfer.types || [], 'Files') >= 0);
+function hideOverlay() { dragDepth = 0; $('overlay').hidden = true; }
+window.addEventListener('dragenter', e => {
+  if (!hasFiles(e)) return;
+  e.preventDefault(); dragDepth++;
+  $('overlayText').textContent = S.running ? 'Wait until the current document has finished' : 'Drop to open';
+  $('overlay').hidden = false;
+});
+window.addEventListener('dragover', e => { if (hasFiles(e)) { e.preventDefault(); e.dataTransfer.dropEffect = S.running ? 'none' : 'copy'; } });
+window.addEventListener('dragleave', e => { if (hasFiles(e) && --dragDepth <= 0) hideOverlay(); });
+window.addEventListener('drop', e => {
+  if (!hasFiles(e)) return;
+  e.preventDefault(); hideOverlay();
+  const f = e.dataTransfer.files[0];
+  if (f) upload(f);
+});
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Escape') return;
+  if (!$('overlay').hidden) hideOverlay();
+  else if (!$('banner').hidden) $('banner').hidden = true;
+  else if (!$('hits').hidden) clearHits();
+});
+
+// ---------- start
+$('descBox').checked = false;   // the browser may restore a checked box on reload; S.desc starts false
+loadInfo();
+refreshJobs();
+let start = null;
+try { const m = /^#job=(.+)$/.exec(location.hash); if (m) start = decodeURIComponent(m[1]); } catch (e) { /* malformed hash */ }
+if (start) showJob(start); else showView('empty');
+})();
+</script>
+</body>
+</html>

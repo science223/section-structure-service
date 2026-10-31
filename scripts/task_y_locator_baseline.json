@@ -1,0 +1,33 @@
+{
+  "description": "TASK Y comparison captured from the pre-change greedy locator; generated for regression gating, not a research result.",
+  "generated_for_task": "TASK_Y_locator_max_retention",
+  "papers": {
+    "A1_Transformer_Attention": {"predicted": 24, "located": 24},
+    "A2_BERT": {"predicted": 28, "located": 27},
+    "A3_GPT4_TechReport": {"predicted": 65, "located": 4},
+    "A4_LLaMA": {"predicted": 25, "located": 25},
+    "A5_ChainOfThought": {"predicted": 36, "located": 35},
+    "A6_LoRA": {"predicted": 33, "located": 33},
+    "A7_ViT": {"predicted": 33, "located": 33},
+    "B1_Survey_TransferLearning": {"predicted": 14, "located": 14},
+    "B2_ResNet": {"predicted": 17, "located": 17},
+    "B3_GAN_IEEE": {"predicted": 54, "located": 53},
+    "B5_YOLO": {"predicted": 17, "located": 17},
+    "B6_FederatedLearning": {"predicted": 23, "located": 23},
+    "B7_GNN_Review": {"predicted": 70, "located": 69},
+    "C1_Survey_LLM": {"predicted": 141, "located": 121},
+    "C2_ScalingLaws": {"predicted": 45, "located": 45},
+    "C3_Voyager": {"predicted": 44, "located": 44},
+    "C4_ConstitutionalAI": {"predicted": 27, "located": 27},
+    "C5_Toolformer": {"predicted": 25, "located": 25},
+    "C6_PaLM": {"predicted": 99, "located": 75},
+    "C7_SparksAGI": {"predicted": 103, "located": 83},
+    "D1_LLM_Medicine": {"predicted": 31, "located": 29},
+    "D2_LLM_ResearchIdeas": {"predicted": 57, "located": 57},
+    "D3_LLM_Topics_Authors": {"predicted": 33, "located": 31},
+    "D4_NLP_RELIES_Linguistics": {"predicted": 10, "located": 10},
+    "D6_WhyLLM_Hallucinate": {"predicted": 25, "located": 25},
+    "D7_RAG_Survey": {"predicted": 36, "located": 36}
+  },
+  "totals": {"predicted": 1115, "located": 982}
+}

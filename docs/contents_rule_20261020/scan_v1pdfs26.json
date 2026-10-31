@@ -1,0 +1,486 @@
+[
+ {
+  "file": "A1_Transformer_Attention.pdf",
+  "chars": 39602,
+  "seconds": 0.0,
+  "from_cache": true,
+  "sections": 24,
+  "max_depth": 3,
+  "unlocated": [],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "A2_BERT.pdf",
+  "chars": 63964,
+  "seconds": 14.8,
+  "from_cache": false,
+  "sections": 27,
+  "max_depth": 2,
+  "unlocated": [
+   "Model Architecture BERT's model architecture is a multi-laye"
+  ],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [
+   "A.4"
+  ],
+  "short_leaves": []
+ },
+ {
+  "file": "A3_GPT4_TechReport.pdf",
+  "chars": 284743,
+  "seconds": 21.0,
+  "from_cache": false,
+  "sections": 60,
+  "max_depth": 3,
+  "unlocated": [
+   "Long context",
+   "Caseys Chu",
+   "Appendices",
+   "Introductory Sommelier (theory knowledge)"
+  ],
+  "contents_skipped": 0,
+  "repeats_skipped": 1,
+  "repeated_ids": [
+   "core-contributors#2",
+   "abstract#2",
+   "2#2",
+   "3#2",
+   "3.1#2",
+   "4#2",
+   "4.1#2",
+   "5#2",
+   "6#2",
+   "appendix#2",
+   "A#2"
+  ],
+  "empty_leaves": [
+   "long-context",
+   "vision",
+   "appendix"
+  ],
+  "short_leaves": [
+   "long-context-kernels: 11 Phil Tillet",
+   "appendix#2: 79"
+  ]
+ },
+ {
+  "file": "A4_LLaMA.pdf",
+  "chars": 87862,
+  "seconds": 7.6,
+  "from_cache": false,
+  "sections": 25,
+  "max_depth": 2,
+  "unlocated": [],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "A5_ChainOfThought.pdf",
+  "chars": 135916,
+  "seconds": 12.1,
+  "from_cache": false,
+  "sections": 35,
+  "max_depth": 2,
+  "unlocated": [
+   "A.3 Will chain-of-thought prompting improving performance fo"
+  ],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [
+   "C"
+  ],
+  "short_leaves": []
+ },
+ {
+  "file": "A6_LoRA.pdf",
+  "chars": 82966,
+  "seconds": 11.1,
+  "from_cache": false,
+  "sections": 33,
+  "max_depth": 2,
+  "unlocated": [],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "A7_ViT.pdf",
+  "chars": 67295,
+  "seconds": 9.2,
+  "from_cache": false,
+  "sections": 33,
+  "max_depth": 3,
+  "unlocated": [],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "B1_Survey_TransferLearning.pdf",
+  "chars": 31279,
+  "seconds": 3.1,
+  "from_cache": false,
+  "sections": 14,
+  "max_depth": 2,
+  "unlocated": [],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "B2_ResNet.pdf",
+  "chars": 59341,
+  "seconds": 5.1,
+  "from_cache": false,
+  "sections": 17,
+  "max_depth": 2,
+  "unlocated": [],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "B3_GAN_IEEE.pdf",
+  "chars": 114366,
+  "seconds": 15.5,
+  "from_cache": false,
+  "sections": 53,
+  "max_depth": 3,
+  "unlocated": [
+   "2 How do generative models work? ###H### 2.1 Maximum likelih"
+  ],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [
+   "4#2"
+  ],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "B5_YOLO.pdf",
+  "chars": 42186,
+  "seconds": 5.1,
+  "from_cache": false,
+  "sections": 17,
+  "max_depth": 2,
+  "unlocated": [],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "B6_FederatedLearning.pdf",
+  "chars": 69771,
+  "seconds": 6.5,
+  "from_cache": false,
+  "sections": 23,
+  "max_depth": 3,
+  "unlocated": [],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "B7_GNN_Review.pdf",
+  "chars": 164749,
+  "seconds": 21.9,
+  "from_cache": false,
+  "sections": 69,
+  "max_depth": 3,
+  "unlocated": [
+   "Appendices"
+  ],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "C1_Survey_LLM.pdf",
+  "chars": 858358,
+  "seconds": 70.8,
+  "from_cache": false,
+  "sections": 137,
+  "max_depth": 3,
+  "unlocated": [
+   "3.1 PUBLICLY AVAILABLE MODEL CHECKPOINT OR APIES",
+   "Mixed Precision Training ###H### Overall Training Suggestion",
+   "Major Issues. ###H### Hallucination",
+   "Background for Quantization. ###H### Post-Training Quantizat"
+  ],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [
+   "8.1.1"
+  ],
+  "short_leaves": []
+ },
+ {
+  "file": "C2_ScalingLaws.pdf",
+  "chars": 89352,
+  "seconds": 12.4,
+  "from_cache": false,
+  "sections": 45,
+  "max_depth": 3,
+  "unlocated": [],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "C3_Voyager.pdf",
+  "chars": 120495,
+  "seconds": 12.2,
+  "from_cache": false,
+  "sections": 44,
+  "max_depth": 3,
+  "unlocated": [],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "C4_ConstitutionalAI.pdf",
+  "chars": 118927,
+  "seconds": 9.3,
+  "from_cache": false,
+  "sections": 27,
+  "max_depth": 2,
+  "unlocated": [],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "C5_Toolformer.pdf",
+  "chars": 71950,
+  "seconds": 6.2,
+  "from_cache": false,
+  "sections": 25,
+  "max_depth": 3,
+  "unlocated": [],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "C6_PaLM.pdf",
+  "chars": 289050,
+  "seconds": 77.3,
+  "from_cache": false,
+  "sections": 78,
+  "max_depth": 3,
+  "unlocated": [
+   "3 Training Dataset ###H### 4 Training Infrastructure ###H###",
+   "3. Conclusion",
+   "Dataset and Vocabulary development: ###H### Model Training",
+   "Gopher (Rae et al., 2021) describes safety benefits and safe",
+   "Task PaLM",
+   "8B"
+  ],
+  "contents_skipped": 15,
+  "repeats_skipped": 0,
+  "repeated_ids": [
+   "palm#2",
+   "palm#3",
+   "540b#2",
+   "t5#2",
+   "xxl#2",
+   "palm#4",
+   "8b#2",
+   "palm#5",
+   "62b#2",
+   "palm#6",
+   "540b#3"
+  ],
+  "empty_leaves": [
+   "39",
+   "input-s-the-model-takes-text",
+   "output-s-the-model-generates-text",
+   "usage",
+   "t5",
+   "xxl",
+   "8b",
+   "palm#2",
+   "62b",
+   "palm#3",
+   "540b#2",
+   "t5#2",
+   "xxl#2",
+   "palm#4",
+   "8b#2",
+   "palm#5",
+   "62b#2",
+   "palm#6"
+  ],
+  "short_leaves": [
+   "1-shot-finetuning: Task PaLM 540B Prior SOTA"
+  ]
+ },
+ {
+  "file": "C7_SparksAGI.pdf",
+  "chars": 506139,
+  "seconds": 75.9,
+  "from_cache": false,
+  "sections": 91,
+  "max_depth": 3,
+  "unlocated": [
+   "2.2.2 Image generation following detailed instructions (`a l",
+   "4.4 Higher-level mathematics ###H### 5 Interaction with the ",
+   "6.1.3 Discussion ###H### 7 Discriminative capabilities ###H#",
+   "9.4 Human expertise, jobs, and economics ###H### 9.5 Constel",
+   "C.6 Example for reverse engineering ###H### D Additional exa",
+   "5. GPT-4 vs ChatGPT"
+  ],
+  "contents_skipped": 5,
+  "repeats_skipped": 1,
+  "repeated_ids": [
+   "gpt-4-vs-chatgpt#2",
+   "gpt-4-vs-chatgpt#3",
+   "gpt-4-vs-chatgpt#4",
+   "gpt-4-vs-chatgpt#5",
+   "gpt-4-vs-chatgpt#6"
+  ],
+  "empty_leaves": [
+   "91"
+  ],
+  "short_leaves": []
+ },
+ {
+  "file": "D1_LLM_Medicine.pdf",
+  "chars": 61294,
+  "seconds": 10.9,
+  "from_cache": false,
+  "sections": 29,
+  "max_depth": 3,
+  "unlocated": [
+   "5.1.7 RQ3: How important is an unbiased evaluation in assess",
+   "5.2.5 RQ5: How well does the proposed ITPS estimator help mi"
+  ],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "D2_LLM_ResearchIdeas.pdf",
+  "chars": 235168,
+  "seconds": 17.9,
+  "from_cache": false,
+  "sections": 54,
+  "max_depth": 2,
+  "unlocated": [],
+  "contents_skipped": 0,
+  "repeats_skipped": 3,
+  "repeated_ids": [
+   "2#2",
+   "5#2",
+   "experiment-plan#2",
+   "4#2",
+   "2#3",
+   "4#3",
+   "7#2",
+   "5#3",
+   "1#2",
+   "5#4",
+   "2#4"
+  ],
+  "empty_leaves": [
+   "4#3"
+  ],
+  "short_leaves": []
+ },
+ {
+  "file": "D3_LLM_Topics_Authors.pdf",
+  "chars": 85938,
+  "seconds": 8.9,
+  "from_cache": false,
+  "sections": 31,
+  "max_depth": 3,
+  "unlocated": [
+   "NLP Contribution Graph. D’Souza and Auer, ###H### Claim and ",
+   "Results. ###H### B Corpus Details"
+  ],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "D4_NLP_RELIES_Linguistics.pdf",
+  "chars": 94458,
+  "seconds": 3.9,
+  "from_cache": false,
+  "sections": 10,
+  "max_depth": 1,
+  "unlocated": [],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "D6_WhyLLM_Hallucinate.pdf",
+  "chars": 100955,
+  "seconds": 7.6,
+  "from_cache": false,
+  "sections": 25,
+  "max_depth": 3,
+  "unlocated": [],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ },
+ {
+  "file": "D7_RAG_Survey.pdf",
+  "chars": 109531,
+  "seconds": 0.0,
+  "from_cache": true,
+  "sections": 36,
+  "max_depth": 3,
+  "unlocated": [],
+  "contents_skipped": 0,
+  "repeats_skipped": 0,
+  "repeated_ids": [],
+  "empty_leaves": [],
+  "short_leaves": []
+ }
+]
