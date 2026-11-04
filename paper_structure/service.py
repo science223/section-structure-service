@@ -115,6 +115,13 @@ class OpenDocument:
 
 _SOFT_HYPHENS = re.compile("[\u00ad\ufffe]")   # PDF text keeps hyphenation points inside words: "abbrevi\ufffeations"
 _VIEW_PIECES = re.compile("[\u00ad\ufffe]\\s*|\\s+|[^\\s\u00ad\ufffe]+")   # a hyphenation point takes the line break after it
+_SOFT_HYPHEN_BREAK = re.compile("[\u00ad\ufffe]\\s*")
+
+
+def _shown_title(title: str) -> str:
+    """A section title as the tools show it: whitespace collapsed and PDF hyphenation points removed with the line
+    break after them ("WORD SIM\\ufffeILARITIES" -> "WORD SIMILARITIES"). Display only; ids and locations are unchanged."""
+    return " ".join(_SOFT_HYPHEN_BREAK.sub("", title).split())
 
 
 @functools.lru_cache(maxsize=8)
@@ -627,7 +634,7 @@ class Navigator:
             # compact on purpose (an agent pays per token): no parent (order + depth give the tree); the count with
             # subsections only where it differs from the section's own
             page = self.page_of(od, s.char_start)
-            sections.append({"id": s.id, "title": " ".join(s.title.split()), "depth": s.depth, "tokens": own,
+            sections.append({"id": s.id, "title": _shown_title(s.title), "depth": s.depth, "tokens": own,
                              **({"tokens_with_subsections": whole} if whole != own else {}),
                              **({"page": page} if page is not None else {}),
                              **({"empty": True} if s.has_empty_body else {})})
@@ -655,7 +662,7 @@ class Navigator:
         part = text[offset: offset + max_chars]
         nxt = offset + len(part) if offset + len(part) < len(text) else None
         page = self.page_of(od, s.char_start)
-        return {"file": od.name, "section_id": s.id, "title": " ".join(s.title.split()),
+        return {"file": od.name, "section_id": s.id, "title": _shown_title(s.title),
                 **({"page": page} if page is not None else {}),
                 "include_subsections": include_subsections, "text": part, "offset": offset,
                 "chars": len(part), "section_chars": len(text), "tokens": approx_tokens(part),
@@ -699,7 +706,7 @@ class Navigator:
                 snippet = " ".join(od.text[max(0, a - context_chars): b + context_chars].split())
                 page = self.page_of(od, a)
                 hits.append({"section_id": sec.id if sec else None,
-                             "section_title": " ".join(sec.title.split()) if sec else "(front matter)",
+                             "section_title": _shown_title(sec.title) if sec else "(front matter)",
                              "char_start": a, **({"page": page} if page is not None else {}), "snippet": snippet})
         return {"file": od.name, "query": query, "scope": section_id or "whole document", "total_hits": total,
                 "returned": len(hits), "hits_per_section": by_section, "hits": hits}

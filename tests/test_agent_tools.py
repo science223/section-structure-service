@@ -388,6 +388,26 @@ class TestRobustness(unittest.TestCase):
             nav = Navigator(model="m", device="cpu", cache_dir=None, engine_factory=FakeEngine, config={})
             self.assertEqual(nav.search(f, "abbreviations")["total_hits"], 2)
 
+    def test_titles_are_shown_without_hyphenation_points(self):
+        # QASPER pilot 11-04 (arXiv 1612.08205): the outline showed "A. ADDITIONAL EXAMPLES OF WORD SIM￾ILARITIES"
+        title = "A. ADDITIONAL EXAMPLES OF WORD SIM￾ILARITIES"
+
+        class Marks:   # marks the appendix line, whatever characters it holds
+            def predict_chunk(self, chunk):
+                heads = [ln for ln in chunk["text"].split("\n") if ln.startswith(("1 ", "A. "))]
+                return ChunkPrediction(chunk["chunk_id"], "", heads)
+
+        with tempfile.TemporaryDirectory() as d:
+            f = Path(d) / "doc.txt"
+            f.write_text("1 Intro\nWe study similarity.\n" + title + "\nMore examples here.\n", encoding="utf-8")
+            nav = Navigator(model="m", device="cpu", cache_dir=None, engine_factory=Marks, config={})
+            titles = [s["title"] for s in nav.outline(f)["sections"]]
+            self.assertEqual(titles, ["1 Intro", "A. ADDITIONAL EXAMPLES OF WORD SIMILARITIES"])
+            sid = nav.outline(f)["sections"][1]["id"]
+            self.assertEqual(nav.read(f, sid)["title"], "A. ADDITIONAL EXAMPLES OF WORD SIMILARITIES")
+            hit = nav.search(f, "examples")["hits"][0]
+            self.assertEqual(hit["section_title"], "A. ADDITIONAL EXAMPLES OF WORD SIMILARITIES")
+
     def test_structure_cache_follows_the_headings_cache(self):
         # Grok review 10-20 (F7): with the headings cache replaced, the old structure cache was still served
         import glob

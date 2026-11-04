@@ -72,7 +72,7 @@ class Job:
 class App:
     """Jobs and the background worker over one Navigator. ``engine_factory`` lets tests use a fake model."""
 
-    def __init__(self, model: str | None = None, device: str | None = None, cache_dir: Path | None = DEFAULT_CACHE,
+    def __init__(self, model: str | None = None, device: str | None = None, cache_dir: Path | str | None = "default",
                  engine_factory: Callable | None = None, config: dict | None = None):
         self.nav = Navigator(model=model, device=device, cache_dir=cache_dir, engine_factory=engine_factory,
                              config=config)
@@ -327,7 +327,7 @@ def make_server(app: App, port: int = 8765) -> ThreadingHTTPServer:
 
 
 def serve(model: str | None = None, device: str | None = None, port: int = 8765, open_browser: bool = True,
-          cache_dir: Path | None = DEFAULT_CACHE) -> int:
+          cache_dir: Path | str | None = "default") -> int:
     app = App(model=model, device=device, cache_dir=cache_dir)
     server = make_server(app, port)
     url = f"http://127.0.0.1:{server.server_address[1]}/"

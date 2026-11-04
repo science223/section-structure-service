@@ -11,6 +11,7 @@ This is a one-way copy; the two files are not kept in bidirectional sync.
 
 from __future__ import annotations
 
+import bisect
 import re
 import string
 import sys
@@ -145,11 +146,68 @@ class _Candidate:
     candidate_order: int
 
 
-@dataclass(frozen=True)
-class _PathState:
-    choices: tuple[_Candidate, ...]
-    preference_cost: int
-    position_sum: int
+class _Path:
+    """A DP path stored as its last choice plus the path it extends, so extending costs O(1) memory.
+    Paths are ordered by _path_key: more choices first, then lower preference cost, then lower position sum, then the
+    (predicted_index, char position, candidate_order) sequence of the choices. No two paths share that sequence."""
+
+    __slots__ = ("candidate", "parent", "length", "preference_cost", "position_sum")
+
+    def __init__(self, candidate: _Candidate, parent: "_Path | None"):
+        self.candidate, self.parent = candidate, parent
+        self.length = 1 + (parent.length if parent else 0)
+        self.preference_cost = candidate.preference_rank + (parent.preference_cost if parent else 0)
+        self.position_sum = candidate.position[0] + (parent.position_sum if parent else 0)
+
+    def choices(self) -> tuple[_Candidate, ...]:
+        out, p = [], self
+        while p is not None:
+            out.append(p.candidate)
+            p = p.parent
+        return tuple(reversed(out))
+
+    def __lt__(self, other: "_Path") -> bool:
+        a = (-self.length, self.preference_cost, self.position_sum)
+        b = (-other.length, other.preference_cost, other.position_sum)
+        if a != b:
+            return a < b
+        return _path_key(self) < _path_key(other)   # rare: walk both paths only on a tie
+
+
+def _path_key(path: _Path):
+    """Minimization key implementing the three specified DP tie-breaks."""
+    return (-path.length, path.preference_cost, path.position_sum,
+            tuple((c.predicted_index, c.position[0], c.candidate_order) for c in path.choices()))
+
+
+class _PrefixMin:
+    """Fenwick tree over sorted positions: the best path ending before a position, in O(log n).
+    11-04: the earlier DP compared every candidate with every earlier path, rebuilding both keys each time; the pytest
+    manual's 430 headings took 295 s and PostgreSQL's 1,899 did not finish in over an hour. The best extension of a
+    candidate is the best earlier path that ends before it, because adding the same candidate to every earlier path
+    keeps their order (each key part grows by the same amount, and paths of equal length get the same last step)."""
+
+    def __init__(self, positions: list[int]):
+        self.positions = positions
+        self.tree: list[_Path | None] = [None] * (len(positions) + 1)
+
+    def add(self, pos: int, path: _Path) -> None:
+        i = self._index(pos) + 1
+        while i < len(self.tree):
+            if self.tree[i] is None or path < self.tree[i]:
+                self.tree[i] = path
+            i += i & -i
+
+    def best_before(self, pos: int) -> "_Path | None":
+        i, best = self._index(pos), None   # tree prefix [1, i] covers positions strictly below pos
+        while i > 0:
+            if self.tree[i] is not None and (best is None or self.tree[i] < best):
+                best = self.tree[i]
+            i -= i & -i
+        return best
+
+    def _index(self, pos: int) -> int:
+        return bisect.bisect_left(self.positions, pos)
 
 
 def _position_preference_rank(position, toc_skip_chars: int) -> int:
@@ -189,27 +247,6 @@ def _ordered_candidates(
     ]
 
 
-def _path_key(state: _PathState):
-    """Minimization key implementing the three specified DP tie-breaks."""
-    return (
-        -len(state.choices),
-        state.preference_cost,
-        state.position_sum,
-        tuple(
-            (
-                choice.predicted_index,
-                choice.position[0],
-                choice.candidate_order,
-            )
-            for choice in state.choices
-        ),
-    )
-
-
-def _better(left: _PathState, right: _PathState) -> _PathState:
-    return left if _path_key(left) < _path_key(right) else right
-
-
 def locate_headings(
     full_text: str,
     predicted_headings: list[str],
@@ -223,8 +260,7 @@ def locate_headings(
     toc_skip_chars = int(len(full_text) * toc_skip_frac)
     unlocated: list[UnlocatedHeading] = []
     raw_positions: dict[int, list[tuple[int, str, str, bool]]] = {}
-    states: list[_PathState] = []
-    best = _PathState(choices=(), preference_cost=0, position_sum=0)
+    per_heading: list[list[_Candidate]] = []
     truncations: list[tuple[int, int]] = []
 
     for predicted_index, heading in enumerate(predicted_headings):
@@ -241,33 +277,26 @@ def locate_headings(
         if len(positions) > MAX_CANDIDATES_PER_HEADING:
             truncations.append((predicted_index, len(positions)))
 
-        candidates = _ordered_candidates(
+        per_heading.append(_ordered_candidates(
             positions,
             predicted_index,
             toc_skip_chars,
-        )
-        current_states: list[_PathState] = []
+        ))
+
+    # For each candidate, the best path ending at it extends the best path of the earlier headings that ends before
+    # it (or is the candidate alone); paths of one heading do not see each other (strictly increasing headings).
+    ends = _PrefixMin(sorted({c.position[0] for cands in per_heading for c in cands}))
+    best: _Path | None = None
+    for candidates in per_heading:
+        current: list[_Path] = []
         for candidate in candidates:
-            candidate_pos = candidate.position[0]
-            candidate_best = _PathState(
-                choices=(candidate,),
-                preference_cost=candidate.preference_rank,
-                position_sum=candidate_pos,
-            )
-            for previous in states:
-                if previous.choices[-1].position[0] >= candidate_pos:
-                    continue
-                contender = _PathState(
-                    choices=previous.choices + (candidate,),
-                    preference_cost=(
-                        previous.preference_cost + candidate.preference_rank
-                    ),
-                    position_sum=previous.position_sum + candidate_pos,
-                )
-                candidate_best = _better(contender, candidate_best)
-            current_states.append(candidate_best)
-            best = _better(candidate_best, best)
-        states.extend(current_states)
+            path = _Path(candidate, ends.best_before(candidate.position[0]))
+            current.append(path)
+            if best is None or path < best:
+                best = path
+        for path in current:
+            ends.add(path.candidate.position[0], path)
+    best_choices = best.choices() if best is not None else ()
 
     if truncations:
         details = ",".join(
@@ -280,9 +309,9 @@ def locate_headings(
             file=sys.stderr,
         )
 
-    selected = {choice.predicted_index: choice for choice in best.choices}
+    selected = {choice.predicted_index: choice for choice in best_choices}
     located: list[LocatedHeading] = []
-    for choice in best.choices:
+    for choice in best_choices:
         pos, matched_form, level, is_standalone = choice.position
         located.append(LocatedHeading(
             predicted_title=predicted_headings[choice.predicted_index],

@@ -81,7 +81,8 @@ def build_parser() -> argparse.ArgumentParser:
     app_parser.add_argument("--port", type=int, default=8765)
     app_parser.add_argument("--no-browser", action="store_true", help="do not open a browser window")
     app_parser.add_argument("--cache-dir", type=Path, default=None,
-                            help="where predicted headings are cached (default ~/.paper_structure/cache)")
+                            help="where predicted headings are cached (default PAPER_STRUCTURE_CACHE, the config "
+                                 "file's cache_dir, else ~/.paper_structure/cache)")
     app_parser.add_argument("--no-cache", action="store_true", help="do not read or write the cache")
 
     search_parser = subparsers.add_parser("search", help="keyword-search one section")
@@ -113,8 +114,9 @@ def main(argv: list[str] | None = None) -> int:
         _write_json(tools)
         return 0
     if args.command == "app":
-        from .app import DEFAULT_CACHE, serve
-        cache = None if args.no_cache else (args.cache_dir or DEFAULT_CACHE)
+        from .app import serve
+        # "default" lets the Navigator read PAPER_STRUCTURE_CACHE and the config file, as the MCP server and CLI do.
+        cache = None if args.no_cache else (args.cache_dir or "default")
         try:
             return serve(model=args.model, device=args.device, port=args.port, open_browser=not args.no_browser,
                          cache_dir=cache)

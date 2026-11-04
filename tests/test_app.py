@@ -197,6 +197,19 @@ class TestConfig(unittest.TestCase):
         with mock.patch.dict(os.environ, {"PAPER_STRUCTURE_MODEL": "env", "PAPER_STRUCTURE_DEVICE": ""}):
             self.assertEqual(App(cache_dir=None, engine_factory=lambda: None, config=conf).model, "env")
 
+    def test_default_cache_follows_env_and_config_like_the_other_interfaces(self):
+        # The app once defaulted to ~/.paper_structure/cache and ignored PAPER_STRUCTURE_CACHE, so a document the MCP
+        # server had read was processed again here.
+        import os
+        from unittest import mock
+        with tempfile.TemporaryDirectory() as d:
+            with mock.patch.dict(os.environ, {"PAPER_STRUCTURE_CACHE": str(Path(d) / "env")}):
+                self.assertEqual(App(model="m", engine_factory=lambda: None, config={}).nav.cache_dir,
+                                 Path(d) / "env")
+            with mock.patch.dict(os.environ, {"PAPER_STRUCTURE_CACHE": ""}):
+                self.assertEqual(App(model="m", engine_factory=lambda: None,
+                                     config={"cache_dir": str(Path(d) / "conf")}).nav.cache_dir, Path(d) / "conf")
+
 
 class TestReadInput(unittest.TestCase):
     def test_text_and_bom_and_crlf(self):
