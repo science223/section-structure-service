@@ -1,9 +1,9 @@
 # Plain-text section tools
 
-`paper_structure` turns UTF-8 academic-paper text into a navigable list of
-sections. It reuses the paper benchmark's deterministic 500-word chunking,
-local v13_2 heading detector, and three-level heading-to-text locator. Section
-bodies are exact slices of the input: the package does not rewrite them.
+`paper_structure` turns UTF-8 text of academic papers and technical documents into a navigable list of sections.
+A local heading tagger (ModernBERT-base, 153 MB ONNX build, CPU only) marks heading spans in 500-word chunks, and a
+locator maps them to a section tree. Section bodies are exact slices of the input: the package does not rewrite them.
+The older generative v13_2 detector is still supported through the `[infer]` extra.
 
 ## Use it from an AI agent
 
@@ -72,10 +72,16 @@ with their token cost), handy for checking what an agent will see.
 
 ## Evidence and scope
 
-The reported numbers come from a 26-paper benchmark: v13_2 has strict F1
-**0.824** and GPT-4o has **0.819**; the two are **statistically
-indistinguishable** at n=26. v13_2 is significantly better than the strongest
-regex baseline (**0.624**).
+The released tagger was evaluated on a 62-paper benchmark with human gold labels (2,072 text chunks, 1,974 gold
+headings). Strict heading micro-F1 with a one-chunk position tolerance is **0.933** (precision 0.908, recall 0.959).
+Under a 2-point non-inferiority margin fixed before the newest models were scored, it is non-inferior to Claude
+Opus 5.5 (0.912) and to five further pre-registered LLMs, and significantly more accurate in 11 of 17 LLM comparisons
+(paired bootstrap over papers, Holm-corrected). Eleven chunks that at least one LLM API refused are excluded for every
+system. On nine held-out technical documents (silver labels from PDF bookmarks; exploratory) macro F1 is 0.832, but
+0.565 on three API manuals.
+
+The numbers below about the locator and empty sections were measured with the older v13_2 predictions on the first
+26 papers.
 
 Using the saved v13_2 predictions, the locator resolves **1,082 of 1,115
 predicted headings (97.04%)** across all 26 papers. Some predictions still
@@ -118,7 +124,8 @@ answer quality improves.
 ## Requirements
 
 - Python 3.10+
-- For inference only: a local Transformers-compatible v13_2 checkpoint, plus
+- For inference only: the released ONNX tagger folder with onnxruntime and tokenizers (`[lite]`, no torch); or,
+  for the older generative path, a local Transformers-compatible v13_2 checkpoint, plus
   PyTorch, Transformers and Accelerate (the verified path used torch 2.11.0+cu128 and
   transformers 5.5.0 on CUDA; a clean install on 2026-10-20 with transformers 5.20.2 and accelerate 1.15.0
   predicted the same headings on two documents, see `docs/agent_acceptance_20261020.md`).
@@ -193,7 +200,7 @@ from paper_structure import recover_structure
 text = Path("<path-to-paper.txt>").read_text(encoding="utf-8")
 document = recover_structure(
     text,
-    model=Path("<path-to-v13_2-checkpoint>"),
+    model=Path("<path-to-jev_j01b_a_q5b_onnx>"),
 )
 
 print("\n".join(document.outline(indented=True)))
@@ -333,7 +340,7 @@ Example client configuration (replace both paths):
   "command":"python",
   "args":["-m","paper_structure.mcp_server"],
   "env":{"PYTHONPATH":"<path-to-plain-text-section-tools>",
-         "PAPER_STRUCTURE_MODEL":"<path-to-v13_2-checkpoint>"}
+         "PAPER_STRUCTURE_MODEL":"<path-to-jev_j01b_a_q5b_onnx>"}
 }}}
 ```
 
