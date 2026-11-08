@@ -7,8 +7,8 @@ joined with a newline, line breaks normalised to \\n), cuts the text at each chu
 <out dir>/<paper_id>.jsonl, one line per chunk: chunk_id, char_start, char_end, is_toc, in_main_table, text. These
 files contain the papers' text, so they are for local use and are not distributed.
 
-Checked on 11-08-2026: on Linux with pypdfium2 5.8.0 or 5.13.0 all 62 papers reproduce every chunk byte for byte. On
-Windows (same versions) 59 do; AKC_2601_01473, AKC_2601_21611 and AKC_2602_03887 differ in spacing and repeated glyphs
+Checked on 11-08-2026: on Linux with pypdfium2 5.8.0, 5.13.0 or 5.15.1 all 62 papers reproduce every chunk byte for byte. On
+Windows (5.8.0 and 5.13.0 tested) 59 do; AKC_2601_01473, AKC_2601_21611 and AKC_2602_03887 differ in spacing and repeated glyphs
 inside figure and math-font text. Gold headings are compared as strings, but a differing text shifts the character
 positions, so use Linux (or WSL / Docker) to reproduce the reported numbers exactly.
 """

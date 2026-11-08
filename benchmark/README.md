@@ -51,8 +51,8 @@ python benchmark/score.py preds/
 `jev_j01b_a_q5b_onnx/` is the unzipped model asset from the Releases page. `chunks/` holds the papers' text, for your
 own use.
 
-**Use Linux (or WSL or Docker) for the extraction.** With pypdfium2 5.8.0 or 5.13.0 on Linux, all 62 papers reproduce
-every chunk byte for byte. On Windows, with the same versions, 59 do. AKC_2601_01473, AKC_2601_21611 and AKC_2602_03887
+**Use Linux (or WSL or Docker) for the extraction.** With pypdfium2 5.8.0, 5.13.0 or 5.15.1 on Linux, all 62 papers reproduce
+every chunk byte for byte. On Windows (5.8.0 and 5.13.0 tested), 59 do. AKC_2601_01473, AKC_2601_21611 and AKC_2602_03887
 then differ in spacing and repeated glyphs inside figure and math text, which shifts the character positions in two of
 them.
 
