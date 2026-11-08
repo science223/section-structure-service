@@ -24,3 +24,4 @@ checkpoints/
 *.pdf
 *.log
 REPORT_*.md
+!benchmark/gold_labels_62.jsonl

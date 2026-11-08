@@ -73,7 +73,7 @@ with their token cost), handy for checking what an agent will see.
 ## Evidence and scope
 
 The released tagger was evaluated on a 62-paper benchmark with human gold labels (2,072 text chunks, 1,974 gold
-headings). Strict heading micro-F1 with a one-chunk position tolerance is **0.933** (precision 0.908, recall 0.959).
+headings; the labels, PDF hashes and scoring scripts are in [`benchmark/`](benchmark/README.md)). Strict heading micro-F1 with a one-chunk position tolerance is **0.933** (precision 0.908, recall 0.959).
 Under a 2-point non-inferiority margin fixed before the newest models were scored, it is non-inferior to Claude
 Opus 5.5 (0.912) and to five further pre-registered LLMs, and significantly more accurate in 11 of 17 LLM comparisons
 (paired bootstrap over papers, Holm-corrected). Eleven chunks that at least one LLM API refused are excluded for every
@@ -373,8 +373,11 @@ reports a skip instead of assuming a machine-specific directory layout.
 The files under `scripts/` are internal regression/audit helpers. They are kept
 in the repository for provenance and are not required by the library, CLI, or
 MCP server. Their full gates require separately supplied benchmark full text
-and saved predictions via command-line arguments. No benchmark data, PDFs,
-gold labels, or model weights are included in this package.
+and saved predictions via command-line arguments. The 62-paper gold labels
+(arXiv ids, heading strings, character positions and per-chunk text hashes; no
+paper text) and the scripts that rebuild the text and score predictions are in
+`benchmark/`. PDFs and benchmark full text are not redistributed; model weights
+are on the Releases page.
 
 ## Provenance
 

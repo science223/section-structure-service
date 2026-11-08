@@ -1,0 +1,9 @@
+The gold labels in this directory (gold_labels_62.jsonl) are licensed under the Creative Commons Attribution 4.0
+International licence (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/legalcode
+
+You may share and adapt them for any purpose, provided you give appropriate credit, link to the licence and indicate
+if changes were made.
+
+The heading strings are short titles taken from the papers listed in the file; the papers themselves are not included
+and remain under their authors' and publishers' terms. The Python scripts in this directory are covered by the
+repository's MIT licence (../LICENSE).
