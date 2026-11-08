@@ -117,9 +117,18 @@ unnumbered heading inside a Roman section sits one level below the last numbered
 one. Use `document.sections` or `document.outline(indented=False)` when a flat
 result is safer.
 
-**Downstream gains for RAG, QA, or summarization have never been evaluated.**
-This package makes structure addressable; it does not claim that retrieval or
-answer quality improves.
+**Downstream use (pre-registered, one dataset).** On 303 QASPER test questions,
+a GPT-6 Luna agent that reads a paper through these tools (outline, read
+section, search) read 42% fewer tokens than with 500-word chunks and BM25 and
+79% fewer than with the full text. Inside three coding agents it read fewer
+tokens than each agent's own file search: 52% in OpenCode, 41% in Codex CLI
+and 46% in Claude Code with GPT-6 Luna, and 46% in OpenCode with GPT-6.1 Terra.
+Without OpenCode's line-number formatting, the OpenCode reductions are 41-47%
+(Luna) and 33-40% (Terra). Answer F1 was
+non-inferior every time (5-point margin). The gain is in tokens read, not in
+answer accuracy, and in Codex CLI the extra tool rounds made total billed input
+34% higher. These studies used one dataset of NLP papers and only OpenAI
+models; summarization was not evaluated.
 
 ## Requirements
 
