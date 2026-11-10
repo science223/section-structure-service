@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "plain-text-section-tools"
 version = "0.1.0"
-description = "Recover and navigate section structure in academic-paper plain text."
+description = "Recover and navigate the section structure of plain-text papers and technical documents."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }

@@ -1,5 +1,9 @@
-# Core local inference dependencies. No network installation was performed by TASK X.
-torch>=2.0
-transformers>=4.40
+# Prefer the extras in pyproject.toml: pip install -e ".[lite,pdf]"
+# The lines below are the same packages: the released ONNX tagger ([lite]) and PDF text ([pdf]). No torch.
+onnxruntime>=1.20
+tokenizers>=0.19
+numpy>=1.24
+pypdfium2>=4
 
-# Optional MCP interface (install separately where needed): mcp>=1.0
+# Older generative v13_2 detector ([infer]): torch>=2.0, transformers>=4.40, accelerate>=0.26
+# Older MCP server ([mcp]): mcp>=1.0
