@@ -22,11 +22,12 @@ cached on disk, so every later call on that file, from any process, answers with
 on the 460,000-character RFC 9110 took about 0.09 s). Errors come back as JSON (`{"error": {"code": "unknown_section", "message": ..., "known_ids": [...]}}`)
 instead of stack traces, so the agent can correct itself.
 
-Install once from this folder (`pip install -e ".[app]"`; on Windows with an NVIDIA GPU, install the CUDA build of
-torch first, see [Installation](#installation); the PyPI project named `paper-structure` is an unrelated package)
-and tell it where the model is: `--model`, `PAPER_STRUCTURE_MODEL`, or a
-UTF-8 file `~/.paper_structure/config.json` containing `{"model": "<checkpoint folder>", "device": "cuda"}` (the
-file suits model paths with non-ASCII characters and agents started by other programs).
+Install once from this folder with `pip install -e ".[lite,pdf]"` (onnxruntime, tokenizers, numpy and pypdfium2; no
+torch). Download `jev_j01b_a_q5b_onnx.zip` from the Releases page, unzip it, and tell the tools where it is:
+`--model`, `PAPER_STRUCTURE_MODEL`, or a UTF-8 file `~/.paper_structure/config.json` containing
+`{"model": "<path to jev_j01b_a_q5b_onnx>"}` (the file suits model paths with non-ASCII characters and agents
+started by other programs). The released build runs on the CPU. The PyPI project named `paper-structure` is an
+unrelated package. For the older generative v13_2 detector on a GPU, see [Installation](#installation).
 
 Then connect it the way your agent takes tools:
 
@@ -45,7 +46,8 @@ Then connect it the way your agent takes tools:
   ```
 
   The server sends `notifications/progress` while it reads a new document when the client passes a progress token.
-  Tested with real agents (docs/agent_acceptance_20261020.md): Claude Code (with a Qwen model) and Codex CLI. The
+  Tested with real agents on the released 153 MB build (docs/agent_acceptance_20261104.md; the earlier runs in
+  docs/agent_acceptance_20261020.md used the older v13_2 checkpoint): Claude Code (with a Qwen model) and Codex CLI. The
   Cursor and Claude Desktop entries above are the documented configuration, not tested here. Grok CLI 1.0.62 finds the
   server (`grok inspect`) but in a headless run its `search_tool` lists no MCP tools and its `--allow` rules did not
   approve them; it may need an interactive approval.
@@ -119,7 +121,9 @@ result is safer.
 
 **Downstream use (pre-registered, one dataset).** On 303 QASPER test questions,
 a GPT-6 Luna agent that reads a paper through these tools (outline, read
-section, search) read 42% fewer tokens than with 500-word chunks and BM25 and
+section, search) read 42% fewer tokens than with 500-word chunks and BM25 (also
+42% fewer than with 500-word chunks and dense retrieval, and 16% fewer than
+with semantic chunks of at most 300 words and BM25) and
 79% fewer than with the full text. Inside three coding agents it read fewer
 tokens than each agent's own file search: 52% in OpenCode, 41% in Codex CLI
 and 46% in Claude Code with GPT-6 Luna, and 46% in OpenCode with GPT-6.1 Terra.
@@ -147,9 +151,10 @@ Install only the capability set you need:
 
 ```console
 pip install -e .              # core location/navigation and offline --headings-jsonl
-pip install -e ".[infer]"     # add torch/transformers/accelerate for model inference
-pip install -e ".[mcp]"       # add the MCP SDK for the server
-pip install -e ".[lite]"      # add onnxruntime/tokenizers for the lightweight ONNX tagger (no torch)
+pip install -e ".[lite]"      # add onnxruntime/tokenizers for the released ONNX tagger (no torch)
+pip install -e ".[pdf]"       # add pypdfium2 to read PDFs
+pip install -e ".[infer]"     # add torch/transformers/accelerate for the older v13_2 detector
+pip install -e ".[mcp]"       # add the MCP SDK for the older MCP server
 ```
 
 - Install from this folder only. This distribution (`plain-text-section-tools`) is not on PyPI, and the PyPI project
@@ -163,26 +168,30 @@ pip install -e ".[lite]"      # add onnxruntime/tokenizers for the lightweight O
 No weights are in this repository. Download `jev_j01b_a_q5b_onnx.zip` from this repository's Releases page (see
 `MODEL_CARD.md` inside it), unzip it, and pass that folder explicitly or set
 `PAPER_STRUCTURE_MODEL`; `models/`, checkpoint extensions, and `.env` files are
-ignored. The inference adapter deliberately preserves the benchmark's CUDA,
-bf16, one-chunk-at-a-time generation path.
+ignored.
 
-Without an NVIDIA GPU, pass `--device cpu` (CLI), `device="cpu"` (Python), or
+The rest of this subsection concerns the older generative v13_2 detector
+(`[infer]`), not the released tagger. Its adapter preserves the CUDA, bf16,
+one-chunk-at-a-time generation path that v13_2 was evaluated with on the first
+26 papers. Without an NVIDIA GPU, pass `--device cpu` (CLI), `device="cpu"` (Python), or
 set `PAPER_STRUCTURE_DEVICE=cpu` (also read by the MCP server). The CPU path
 loads float32 weights and is slower (about 3.5 s per 500-word chunk on a
 20-core desktop CPU; a 26-page paper has roughly 10-60 chunks). It is not the
-benchmark path, so its output can differ slightly; on the one paper checked
+path v13_2 was evaluated with, so its output can differ slightly; on the one paper checked
 (11 chunks) it was identical to the GPU output.
 
 ### Lightweight tagger (no torch)
 
 A second kind of model folder is supported: the Jev-format heading tagger (ModernBERT-base fine-tuned to tag every
 token as heading start / inside / outside, decoded with Viterbi, so every heading is copied verbatim from the text).
-`paper_structure` recognises it from the folder itself, so the commands above do not change:
+`paper_structure` recognises it from the folder itself, so the commands above do not change.
+This is the model behind the 62-paper numbers above. On the benchmark the 153 MB build scores 0.933, as do the
+full-precision weights, and the two give the same headings on 2,065 of the 2,072 chunks.
 
 - a folder with `model.onnx` + `tokenizer.json` + `config.json` (quantized ONNX; the released build is 153 MB) runs on
   the CPU with
-  `pip install -e ".[lite]"` only (onnxruntime + tokenizers + numpy, about 90 MB installed, against about 4.3 GB for
-  torch with CUDA + transformers);
+  `pip install -e ".[lite]"` only (onnxruntime + tokenizers + numpy; about 140 MB installed with their dependencies,
+  against about 4.3 GB for torch with CUDA + transformers);
 - a folder with the original safetensors weights (598 MB) runs through the `[infer]` stack, GPU or CPU.
 
 Measured during development: on 3,916 held-out arXiv chunks with silver labels the 153 MB build gave the same
@@ -286,8 +295,8 @@ snippets; it is not vector retrieval.
 ## Desktop app (local web page)
 
 ```console
-pip install -e ".[app]"       # torch, transformers and pypdfium2 (PDF text)
-paper-structure app --model <checkpoint-dir>
+pip install -e ".[lite,pdf]"  # the released ONNX tagger and PDF text; ".[app]" for the older torch path
+paper-structure app --model <path-to-jev_j01b_a_q5b_onnx>
 ```
 
 The command starts a small server on `127.0.0.1` (port 8765; `--port` to change it) and opens the browser. Drop a
@@ -297,8 +306,9 @@ agent would make (`get_outline`, `read_section`, `search_document`) and what eac
 next to the whole document. The outline can be exported as Markdown or JSON.
 
 - Nothing leaves the machine: the server binds to `127.0.0.1` only and makes no network request.
-- PDF text is extracted exactly as the benchmark extracted its papers (pypdfium2, page by page); on the 26 benchmark
-  PDFs the app's text is byte-identical to the benchmark's texts.
+- PDF text is extracted exactly as the benchmark extracted its papers (pypdfium2, page by page); on the first 26
+  benchmark PDFs the app's text is byte-identical to the benchmark's texts (all 62 papers and the platform caveat:
+  `benchmark/README.md`).
 - Predicted headings are cached under `~/.paper_structure/cache` by the text's SHA-256, the model path, the model
   files' sizes and times, and the device, so reopening a file does not run the model (`--no-cache` to turn it off,
   `--cache-dir` to move it). The sections built from them are cached too, keyed also by the version of the code
@@ -309,8 +319,8 @@ next to the whole document. The outline can be exported as Markdown or JSON.
   by double-clicking a script.
 - A scanned PDF without a text layer has no text to read; run OCR first.
 - For PDFs, every section also carries the page it starts on (`page` in `get_outline`, `read_section` and each
-  search hit); the page starts come from the same page-by-page extraction (26/26 benchmark PDFs: same text, every
-  page's own text at its start, `scripts/check_pages.py`).
+  search hit); the page starts come from the same page-by-page extraction (the first 26 benchmark PDFs: same text,
+  every page's own text at its start, `scripts/check_pages.py`).
 
 ## Zotero plugin (Zotero 7, preview)
 
