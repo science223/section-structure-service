@@ -77,8 +77,8 @@ with their token cost), handy for checking what an agent will see.
 The released tagger was evaluated on a 62-paper benchmark with human gold labels (2,072 text chunks, 1,974 gold
 headings; the labels, PDF hashes and scoring scripts are in [`benchmark/`](benchmark/README.md)). Strict heading micro-F1 with a one-chunk position tolerance is **0.933** (precision 0.908, recall 0.959).
 Under a 2-point non-inferiority margin fixed before the newest models were scored, it is non-inferior to Claude
-Opus 5.5 (0.912) and to five further pre-registered LLMs, and significantly more accurate in 11 of 17 LLM comparisons
-(paired bootstrap over papers, Holm-corrected). Eleven chunks that at least one LLM API refused are excluded for every
+Opus 5.5 (0.912) and to five further pre-registered LLMs, and significantly more accurate in 10 of 16 LLM comparisons
+(paired permutation tests over papers, Holm-corrected). Eleven chunks that at least one LLM API refused are excluded for every
 system. On nine held-out technical documents (silver labels from PDF bookmarks; exploratory) macro F1 is 0.832, but
 0.565 on three API manuals.
 
@@ -128,7 +128,7 @@ with semantic chunks of at most 300 words and BM25) and
 tokens than each agent's own file search: 52% in OpenCode, 41% in Codex CLI
 and 46% in Claude Code with GPT-6 Luna, and 46% in OpenCode with GPT-6.1 Terra.
 Without OpenCode's line-number formatting, the OpenCode reductions are 41-47%
-(Luna) and 33-40% (Terra). Answer F1 was
+(Luna) and 33-39% (Terra). Answer F1 was
 non-inferior every time (5-point margin). The gain is in tokens read, not in
 answer accuracy, and in Codex CLI the extra tool rounds made total billed input
 34% higher. These studies used one dataset of NLP papers and only OpenAI
